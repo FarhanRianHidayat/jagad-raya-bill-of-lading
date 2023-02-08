@@ -140,7 +140,6 @@
 
             <!-- Main Content -->
             <div id="content">
-                @yield('content')
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
@@ -154,6 +153,7 @@
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
@@ -211,16 +211,18 @@
 
                     </ul>
 
+
                 </nav>
                 <!-- End of Topbar -->
+
+                @yield('content')
+                {{-- @yield('content2') --}}
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                    </div>
+
 
                     <!-- Content Row -->
                     <div class="row">

@@ -2,12 +2,12 @@
 @section('title', 'Tabel User')
 
 @section('content')
-<h1 class="mt-3" style="margin-left: 23px">Data User</h1>
+<h1 class="mt-3" style="margin-left: 35vw">Data User</h1>
 
 <div class="container mt-3">
     <div class="bungkus d-flex mb-4">
     <div class="row g-1">
-        <a href="{{route('add-user')}}" type="button" class="btn btn-primary">+ Tambah</a>
+        <a href="{{route('add-user')}}" type="button" class="btn btn-primary ml-3">+ Tambah</a>
         {{-- <div class="dropdown">
             <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Export
@@ -19,9 +19,8 @@
     </div> --}}
     </div>
     <div class="row g-1" style="margin-left: 54vw; ">
-        <form action="/user" method="GET">
-            <input type="search" id="inputPassword6" name="search" class="form-control" aria-describedby="passwordHelpInline" placeholder="Search...">
-        </form>
+        {{-- <form action="/user" method="GET">
+        </form> --}}
         {{-- <button type="button" class="btn btn-primary mt-1" data-bs-toggle="modal" data-bs-target="#exampleModal">Tanggal</button> --}}
     </div>
 </div>
@@ -75,28 +74,4 @@
     </section>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
-<script>
-    $('.delete').click( function(){
-      var databaseid = $(this).attr('data-id'); 
-      var tanggalid = $(this).attr('data-tanggal'); 
-    swal({
-    title: "Are you sure?",
-    text: "Once deleted, you will not be able to recover this imaginary file! Id: "+databaseid+" Tanggal: "+tanggalid+"",
-    icon: "warning",
-    buttons: true,
-    dangerMode: true,
-    })
-    .then((willDelete) => {
-    if (willDelete) {
-      window.location = "/transaction/delete/"+databaseid+""
-    swal("Poof! Your imaginary file has been deleted!", {
-    icon: "success",
-    });
-    } else {
-    swal("Your imaginary file is safe!");
-    }
-    });
-    });
-</script>
 @endsection

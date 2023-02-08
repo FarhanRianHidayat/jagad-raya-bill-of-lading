@@ -15,8 +15,8 @@ class UserController extends Controller
     }
 
     public function create(){
-        $data = user::all();
-        return view('user.tambah',[
+        $data = User::all();
+        return view('user.add',[
             'data' => $data
         ]);
     }
