@@ -1,51 +1,42 @@
+{{-- @section('title', 'Tambah User') --}}
+
 @extends('layouts.main')
-@section('title', 'Tambah User')
 
 @section('content')
-
-<p>j;flajsdlfja;lfjsa;</p>
-{{-- <div class="container">
-    <h1 class="text-center mb-4 mt-4">Tambah User</h1>
-    <div class="row justify-content-center">
-        <div class="col-8">
-            <div class="card">
-                <div class="card-body" style="width: 90%;">
-                    <form action="/user/insert" method="POST" enctype="multipart/form-data">
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title m-0 font-weight-bold text-primary">Tambah Data Fasilitas Kamar</h4>
+        </div>
+        <div class="card-body">
+            <form action="/user/update/{{ $data->id }}" method="post" enctype="multipart/form-data">
                         @csrf
-                        <div class="mb-3">
-                        </div>
+                        @method('put')
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Name</label>
-                            <input type="text" name="name" class="form-control">
-                            @error('name')
-                                <div class="text-danger">
-                                    {{ $message }}
-                                </div>
-                            @enderror
+                            <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->name }}">
                         </div>
                         <div class="mb-3">
-                            <label for="3" class="form-label">Role</label>
-                            <select class="form-control" id="3" name="role">
+                    <label for="role" class="form-label">Role</label>
+                    <select class="form-control @error('role') is-invalid @enderror"
+                        aria-label="Default select example" id="role" name="role" value="{{ $data->role}}">
                                 <option value="1">Admin</option>
                                 <option value="2">Employee</option>
-                                <option value="2">User</option>
-                            </select>
+                                <option value="3">User</option>
+                    </select>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email</label>
-                            <input type="text" name="email" class="form-control">
-                            @error('email')
-                                <div class="text-danger">
-                                    {{ $message }}
-                                </div>
-                            @enderror
+                            <input type="text" id="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->email }}">
                         </div>
-                        <button type="submit" class="btn btn-primary float-right" id="submitButton">Submit</button>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Password</label>
+                            <input type="password" id="password" name="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->password }}">
+                        </div>
+                        <button type="submit" class="btn btn-primary float-right" id="editButton">Submit</button>
+                        <a href="/user" class="btn btn-light">Cancel</a>
                     </form>
-                </div>
-            </div>
         </div>
     </div>
-</div> --}}
-
+</div>
 @endsection

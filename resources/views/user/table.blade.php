@@ -73,5 +73,32 @@
         </div>
     </section>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.1.slim.js"
+    integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
+<script>
+    $('.delete').click(function () {
+        var databaseid = $(this).attr('data-id');
+        var nameid = $(this).attr('data-name');
+        // var nameid = $(this).attr('data-name');
+        swal({
+                title: "Are you sure?",
+                text: "Once deleted, you will not be able to recover this imaginary file! Id: " +
+                    databaseid + "Name: " +nameid+"",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+                    window.location = "/user/delete/" + databaseid + ""
+                    swal("Poof! Your imaginary file has been deleted!", {
+                        icon: "success",
+                    });
+                } else {
+                    swal("Your imaginary file is safe!");
+                }
+            });
+    });
 
+</script>
 @endsection
