@@ -13,7 +13,7 @@
                 @csrf
                 <div class="form-group">
                     <label for="2">Type</label>
-                    <select class="form-control" id="1" name="precarriage">
+                    <select class="form-control" id="1" name="type">
                                 <option value="1">Export</option>
                                 <option value="2">Import</option>
                     </select>
