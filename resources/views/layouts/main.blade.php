@@ -77,6 +77,15 @@
                 <a class="nav-link" href="/user">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>User</span></a>
+                <a class="nav-link" href="/shipper">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Shipper</span></a>
+                <a class="nav-link" href="/consignee">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Consignee</span></a>
+                <a class="nav-link" href="/transport">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Transport</span></a>
             </li>
 
             
