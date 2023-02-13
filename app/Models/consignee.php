@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class consignee extends Model
 {
     use HasFactory;
-    protected $table = 'consignee';
+    protected $table = 'consignees';
     protected $guarded = [''];
 }

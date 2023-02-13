@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ShipperController;
 use App\Http\Controllers\ConsigneeController;
 use App\Http\Controllers\TransportController;
+use App\Http\Controllers\GoodController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,3 +54,10 @@ Route::post('/transport/insert',[TransportController::class, 'store'])->name('in
 Route::get('/transport/form-edit/{id}',[TransportController::class, 'edit'])->name('form-edit-transport');
 Route::put('/transport/update/{id}',[TransportController::class, 'update'])->name('update-transport');
 Route::get('/transport/delete/{id}',[TransportController::class, 'destroy'])->name('delete-transport');
+// Good
+Route::get('/good', [GoodController::class, 'index'])->name('good');
+Route::get('/good/add',[GoodController::class, 'create'])->name('add-good');
+Route::post('/good/insert',[GoodController::class, 'store'])->name('insert-good');
+Route::get('/good/form-edit/{id}',[GoodController::class, 'edit'])->name('form-edit-good');
+Route::put('/good/update/{id}',[GoodController::class, 'update'])->name('update-good');
+Route::get('/good/delete/{id}',[GoodController::class, 'destroy'])->name('delete-good');

@@ -13,12 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('consignee', function (Blueprint $table) {
+        Schema::create('transports', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('address');
-            $table->string('telephone');
-            $table->string('email');
+            $table->enum('precarriage',['air','sea','road','rail']);
+            $table->string('placeofreceipt');
+            $table->string('vessel');
+            $table->string('voyagenumber');
+            $table->string('portofloading');
+            $table->string('portofdischarge');
+            $table->string('placeofdelivery');
+            $table->string('finaldestination');
             $table->timestamps();
         });
     }
@@ -30,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('consignee');
+        //
     }
 };

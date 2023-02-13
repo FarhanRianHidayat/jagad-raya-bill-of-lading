@@ -23,7 +23,7 @@ class TransportController extends Controller
         $validasi = $this->validate($request,[
             'precarriage' => ['required'],
             'placeofreceipt' => ['required'],
-            'oceanvessel' => ['required'],
+            'vessel' => ['required'],
             'voyagenumber' => ['required'],
             'portofloading' => ['required'],
             'portofdischarge' => ['required'],
@@ -46,7 +46,7 @@ class TransportController extends Controller
         $validasi = $this->validate($request,[
             'precarriage' => ['required'],
             'placeofreceipt' => ['required'],
-            'oceanvessel' => ['required'],
+            'vessel' => ['required'],
             'voyagenumber' => ['required'],
             'portofloading' => ['required'],
             'portofdischarge' => ['required'],

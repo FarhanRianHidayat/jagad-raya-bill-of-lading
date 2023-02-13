@@ -25,8 +25,8 @@
                     <input type="text" class="form-control" id="2" placeholder="Place Of Receipt" name="placeofreceipt">
                 </div>
                 <div class="form-group">
-                    <label for="1">Ocean Vessel</label>
-                    <input type="text" class="form-control" id="3" placeholder="Ocean Vessel" name="oceanvessel">
+                    <label for="1">Vessel</label>
+                    <input type="text" class="form-control" id="3" placeholder="Vessel" name="vessel">
                 </div>
                 <div class="form-group">
                     <label for="1">Voyage Number</label>

@@ -27,8 +27,8 @@
                             <input type="text" name="placeofreceipt" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->placeofreceipt }}">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Ocean Vessel</label>
-                            <input type="text" name="oceanvessel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->oceanvessel }}">
+                            <label for="exampleInputEmail1" class="form-label">Vessel</label>
+                            <input type="text" name="vessel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->vessel }}">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Voyage Number</label>
@@ -51,7 +51,7 @@
                             <input type="text" name="finaldestination" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->finaldestination }}">
                         </div>
                         <button type="submit" class="btn btn-primary float-right" id="editButton">Submit</button>
-                        <a href="/user" class="btn btn-light">Cancel</a>
+                        <a href="/transport" class="btn btn-light">Cancel</a>
                     </form>
         </div>
     </div>

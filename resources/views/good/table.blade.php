@@ -2,12 +2,12 @@
 @section('title', 'Tabel User')
 
 @section('content')
-<h1 class="mt-3" style="margin-left: 35vw">Data Transport</h1>
+<h1 class="mt-3" style="margin-left: 35vw">Data Goods</h1>
 
 <div class="container mt-3">
     <div class="bungkus d-flex mb-4">
     <div class="row g-1">
-        <a href="{{route('add-transport')}}" type="button" class="btn btn-primary ml-3">+ Tambah</a>
+        <a href="{{route('add-good')}}" type="button" class="btn btn-primary ml-3">+ Tambah</a>
         {{-- <div class="dropdown">
             <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Export
@@ -32,14 +32,12 @@
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Pre-carriage by</th>
-                                <th scope="col">Place Of Receipt</th>
-                                <th scope="col">Vessel</th>
-                                <th scope="col">Voyage Number</th>
-                                <th scope="col">Port Of Loading</th>
-                                <th scope="col">Port Of Discharge</th>
-                                <th scope="col">Place Of Delivery</th>
-                                <th scope="col">Final Destination</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Mark & Numbers</th>
+                                <th scope="col">Description of Goods</th>
+                                <th scope="col">Gross weight</th>
+                                <th scope="col">Measurement</th>
+                                <th scope="col">BOL Number</th>
                                 <th scope="col">Action</th>
                         </thead>
                         <tbody>
@@ -47,16 +45,14 @@
                             <tr>
                                 {{-- <th scope="row">{{ $index + $kategoris->firstItem() }}</th> --}}
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $row->precarriage }}</td>
-                                <td>{{ $row->placeofreceipt }}</td>
-                                <td>{{ $row->vessel }}</td>
-                                <td>{{ $row->voyagenumber }}</td>
-                                <td>{{ $row->portofloading }}</td>
-                                <td>{{ $row->portofdischarge }}</td>
-                                <td>{{ $row->placeofdelivery }}</td>
-                                <td>{{ $row->finaldestination }}</td>
+                                <td>{{ $row->type }}</td>
+                                <td>{{ $row->markandnumbers }}</td>
+                                <td>{{ $row->description }}</td>
+                                <td>{{ $row->grossweight }}</td>
+                                <td>{{ $row->measurement }}</td>
+                                <td>{{ $row->bolnumber }}</td>
                                 <td>
-                                    <a href="/transport/form-edit/{{ $row->id }}" class="text-warning">
+                                    <a href="/good/form-edit/{{ $row->id }}" class="text-warning">
                                         <button type="button" class="btn btn-icon rounded-circle btn-outline-warning">
                                             <svg xmlns="http://www.w3.org/2000/svg" role="img" width="1em" height="1em" viewBox="0 0 24 24">
                                                 <path d="M5 20h14a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2zm-1-5L14 5l3 3L7 18H4v-3zM15 4l2-2l3 3l-2.001 2.001L15 4z" fill="currentColor" fill-rule="evenodd" />
@@ -100,7 +96,7 @@
             })
             .then((willDelete) => {
                 if (willDelete) {
-                    window.location = "/transport/delete/" + databaseid + ""
+                    window.location = "/good/delete/" + databaseid + ""
                     swal("Poof! Your imaginary file has been deleted!", {
                         icon: "success",
                     });

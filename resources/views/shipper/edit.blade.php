@@ -29,7 +29,7 @@
                             <input type="text" id="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->email }}">
                         </div>
                         <button type="submit" class="btn btn-primary float-right" id="editButton">Submit</button>
-                        <a href="/user" class="btn btn-light">Cancel</a>
+                        <a href="/shipper" class="btn btn-light">Cancel</a>
                     </form>
         </div>
     </div>
