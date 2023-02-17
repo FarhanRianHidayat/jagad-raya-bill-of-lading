@@ -39,7 +39,7 @@
                     <input type="text" class="form-control" id="6" placeholder="BOL Number" name="bolnumber">
                 </div>
                 <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                <a href="/user" class="btn btn-light">Cancel</a>
+                <a href="/good" class="btn btn-light">Cancel</a>
             </form>
         </div>
     </div>
