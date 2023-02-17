@@ -7,10 +7,17 @@ use Illuminate\Http\Request;
 
 class TransportController extends Controller
 {
-    public function index(){
-        return view('transport.table',[
-            'data' => transport::all(),
-        ]);
+    public function index(Request $request){
+
+        if($request->has('search')){
+            $data = transport::where('name','LIKE','%' .$request->search.'%')->paginate(5);
+            // $data = consignee::where('email','LIKE','%' .$request->search.'%')->paginate(15);
+        } else{
+            // $data = consignee::where('email','LIKE','%' .$request->search.'%')->paginate(15);
+
+            $data = transport::paginate(5);
+        }
+        return view('consignee.table', compact('data'));
     }
 
     public function create(){

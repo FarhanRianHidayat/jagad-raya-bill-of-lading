@@ -7,10 +7,17 @@ use Illuminate\Http\Request;
 
 class ShipperController extends Controller
 {
-    public function index(){
-        return view('shipper.table',[
-            'data' => shipper::all(),
-        ]);
+    public function index(Request $request){
+        
+        if($request->has('search')){
+            $data = shipper::where('name','LIKE','%' .$request->search.'%')->paginate(5);
+            // $data = consignee::where('email','LIKE','%' .$request->search.'%')->paginate(15);
+        } else{
+            // $data = consignee::where('email','LIKE','%' .$request->search.'%')->paginate(15);
+
+            $data = shipper::paginate(5);
+        }
+        return view('shipper.table', compact('data'));
     }
 
     public function create(){

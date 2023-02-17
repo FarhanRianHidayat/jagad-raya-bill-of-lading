@@ -7,11 +7,17 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function index(){
-        $data = User::all()->sortBy('name');
-        return view('user.table',[
-            'data' => $data
-        ]);
+    public function index(Request $request){
+        
+        if($request->has('search')){
+            $data = user::where('name','LIKE','%' .$request->search.'%')->paginate(5);
+            // $data = consignee::where('email','LIKE','%' .$request->search.'%')->paginate(15);
+        } else{
+            // $data = consignee::where('email','LIKE','%' .$request->search.'%')->paginate(15);
+
+            $data = user::paginate(5);
+        }
+        return view('user.table', compact('data'));
     }
 
     public function create(){

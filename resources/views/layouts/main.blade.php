@@ -31,9 +31,15 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard">
+                <div>
+                    {{-- <i class="fas fa-laugh-wink"></i> --}}
+                    {{-- <img src="logojagad.png" alt="" srcset="" style="background-color:white;"> --}}
+                    <div style="background-color: white; border-radius:10%;">
+                        <img class="" src="/assets/img/logojagad2.png" style="width: 30px;">
+                    </div>
+                    {{-- <img class="img-profile rounded-circle" src="/assets/img/logojagad.png"> --}}
+                    
                 </div>
                 <div class="sidebar-brand-text mx-3">Jagad <sup>Raya</sup></div>
             </a>

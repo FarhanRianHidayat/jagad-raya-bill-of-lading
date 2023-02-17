@@ -7,10 +7,18 @@ use Illuminate\Http\Request;
 
 class GoodController extends Controller
 {
-    public function index(){
-        return view('good.table',[
-            'data' => good::all(),
-        ]);
+    public function index(Request $request){
+
+        if($request->has('search')){
+            $data = good::where('markandnumbers','LIKE','%' .$request->search.'%')->paginate(5);
+            // $data = consignee::where('email','LIKE','%' .$request->search.'%')->paginate(15);
+        } else{
+            // $data = consignee::where('email','LIKE','%' .$request->search.'%')->paginate(15);
+
+            $data = good::paginate(5);
+        }
+
+        return view('good.table', compact('data'));
     }
 
     public function create(){
