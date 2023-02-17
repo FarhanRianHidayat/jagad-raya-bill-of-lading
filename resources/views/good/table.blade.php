@@ -19,9 +19,9 @@
     </div> --}}
     </div>
     <div class="row g-1" style="margin-left: 54vw; ">
-        {{-- <form action="/user" method="GET">
-        </form> --}}
-        {{-- <button type="button" class="btn btn-primary mt-1" data-bs-toggle="modal" data-bs-target="#exampleModal">Tanggal</button> --}}
+        <form action="/good" method="GET">
+            <input type="search" id="inputPassword6" name="search" class="form-control" aria-describedby="passwordHelpInline" placeholder="Search...">
+        </form>
     </div>
 </div>
     <section class="section">

@@ -7,10 +7,20 @@ use Illuminate\Http\Request;
 
 class ConsigneeController extends Controller
 {
-    public function index(){
-        return view('consignee.table',[
-            'data' => consignee::all(),
-        ]);
+    public function index(Request $request){
+
+        if($request->has('search')){
+            $data = consignee::where('name','LIKE','%' .$request->search.'%')->paginate(5);
+            // $data = consignee::where('email','LIKE','%' .$request->search.'%')->paginate(15);
+        } else{
+            // $data = consignee::where('email','LIKE','%' .$request->search.'%')->paginate(15);
+
+            $data = consignee::paginate(5);
+        }
+    
+        return view('consignee.table', compact('data'));
+        // $data = consignee::paginate(5);
+        // return view('consignee.table', compact('data'));
     }
 
     public function create(){
