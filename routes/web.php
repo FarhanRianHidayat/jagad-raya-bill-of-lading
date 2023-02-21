@@ -6,6 +6,7 @@ use App\Http\Controllers\ShipperController;
 use App\Http\Controllers\ConsigneeController;
 use App\Http\Controllers\TransportController;
 use App\Http\Controllers\GoodController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,7 @@ use App\Http\Controllers\GoodController;
 */
 
 Route::get('/', function () {
-    return view('login.login');
+    return view('layouts.usermain');
 }); 
 
 Route::get('/dashboard', function () {
@@ -61,3 +62,9 @@ Route::post('/good/insert',[GoodController::class, 'store'])->name('insert-good'
 Route::get('/good/form-edit/{id}',[GoodController::class, 'edit'])->name('form-edit-good');
 Route::put('/good/update/{id}',[GoodController::class, 'update'])->name('update-good');
 Route::get('/good/delete/{id}',[GoodController::class, 'destroy'])->name('delete-good');
+// Login
+route::get('/login',[LoginController::class,'index'])->name('login')->middleware('guest');
+route::post('/login',[LoginController::class,'authenticate']);
+route::post('/logout',[LoginController::class,'logout']);
+// route::get('/registrasi',[RegisterController::class,'index'])->name('registrasi');
+// route::post('/registrasi',[RegisterController::class,'store']);

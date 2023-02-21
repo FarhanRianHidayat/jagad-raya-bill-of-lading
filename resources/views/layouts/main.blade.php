@@ -20,6 +20,8 @@
     <!-- Custom styles for this template-->
     <link href="/assets/css/sb-admin-2.min.css" rel="stylesheet">
 
+    <link rel="icon" href="assets/img/logo.jpeg">
+
 </head>
 
 <body id="page-top">
@@ -36,7 +38,7 @@
                     {{-- <i class="fas fa-laugh-wink"></i> --}}
                     {{-- <img src="logojagad.png" alt="" srcset="" style="background-color:white;"> --}}
                     <div style="background-color: white; border-radius:10%;">
-                        <img class="" src="/assets/img/logojagad2.png" style="width: 30px;">
+                        <img class="" src="/assets/img/logo.jpeg" style="width: 30px;">
                     </div>
                     {{-- <img class="img-profile rounded-circle" src="/assets/img/logojagad.png"> --}}
                     
