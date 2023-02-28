@@ -17,11 +17,11 @@ class ShipperController extends Controller
 
             $data = shipper::paginate(5);
         }
-        return view('shipper.table', compact('data'));
+        return view('dashboardemployee.shipper.table', compact('data'));
     }
 
     public function create(){
-        return view('shipper.add',[
+        return view('dashboardemployee.shipper.add',[
             'data' => shipper::all()
         ]);
     }
@@ -40,7 +40,7 @@ class ShipperController extends Controller
     }
 
     public function edit($id){
-        return view('shipper.edit',[
+        return view('dashboardemployee.shipper.edit',[
             'data' => shipper::find($id)
         ]);
     }

@@ -18,13 +18,13 @@ class ConsigneeController extends Controller
             $data = consignee::paginate(5);
         }
     
-        return view('consignee.table', compact('data'));
+        return view('dashboardemployee.consignee.table', compact('data'));
         // $data = consignee::paginate(5);
         // return view('consignee.table', compact('data'));
     }
 
     public function create(){
-        return view('consignee.add',[
+        return view('dashboardemployee.consignee.add',[
             'data' => consignee::all()
         ]);
     }
@@ -43,7 +43,7 @@ class ConsigneeController extends Controller
     }
 
     public function edit($id){
-        return view('consignee.edit',[
+        return view('dashboardemployee.consignee.edit',[
             'data' => consignee::find($id)
         ]);
     }

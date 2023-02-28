@@ -5,40 +5,30 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-
 class LoginController extends Controller
 {
-        public function index(){
+    public function index(){
         return view('login.login');
     }
-
     public function authenticate(Request $request){
         
         $credentials = $request->validate([
-            'username' => ['required'],
+            'name' => ['required'],
             'password' => ['required']
         ]);
 
         if(Auth::attempt($credentials)){
-    
             if(auth()->user()->role == 'admin'){
                 $request->session()->regenerate();
-                return redirect()->intended('/');
-
-            }else if(auth()->user()->role == 'employee'){
+                return redirect()->intended('/dashboardadmin');
+            }if(auth()->user()->role == 'employee'){
                 $request->session()->regenerate();
-                return redirect()->intended('/');
-
+                return redirect()->intended('/dashboardemployee');
             }else if(auth()->user()->role == 'user'){
-                $request->session()->regenerate();
-                return redirect()->intended('/');
-
-            }else{
                 $request->session()->regenerate();
                 return redirect()->intended('/');
             }
         }
-
         return back()->with('loginError','Login Failed!');
     }
 

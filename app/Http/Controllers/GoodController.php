@@ -18,11 +18,11 @@ class GoodController extends Controller
             $data = good::paginate(5);
         }
 
-        return view('good.table', compact('data'));
+        return view('dashboardemployee.good.table', compact('data'));
     }
 
     public function create(){
-        return view('good.add',[
+        return view('dashboardemployee.good.add',[
             'data' => good::all()
         ]);
     }
@@ -43,7 +43,7 @@ class GoodController extends Controller
     }
 
     public function edit($id){
-        return view('good.edit',[
+        return view('dashboardemployee.good.edit',[
             'data' => good::find($id)
         ]);
     }

@@ -17,11 +17,11 @@ class TransportController extends Controller
 
             $data = transport::paginate(5);
         }
-        return view('consignee.table', compact('data'));
+        return view('dashboardemployee.transport.table', compact('data'));
     }
 
     public function create(){
-        return view('transport.add',[
+        return view('dashboardemployee.transport.add',[
             'data' => transport::all()
         ]);
     }
@@ -44,7 +44,7 @@ class TransportController extends Controller
     }
 
     public function edit($id){
-        return view('transport.edit',[
+        return view('dashboardemployee.transport.edit',[
             'data' => transport::find($id)
         ]);
     }
