@@ -22,10 +22,14 @@
                                 <option value="4">Rail</option>
                     </select>
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Placce Of Receipt</label>
-                            <input type="text" name="placeofreceipt" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->placeofreceipt }}">
-                        </div>
+                        <div class="form-group">
+                            <label for="1">Place Of Receipt</label>
+                            <select class="form-control" name="placeofreceipt_id" id="5">
+                                @foreach ($location as $row)
+                                <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
+                                @endforeach
+                            </select>                
+                        </div>>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Vessel</label>
                             <input type="text" name="vessel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->vessel }}">
@@ -35,20 +39,36 @@
                             <input type="text" name="voyagenumber" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->voyagenumber }}">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Port Of Loading</label>
-                            <input type="text" name="portofloading" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->portofloading }}">
+                            <label for="1">Port Of Loading</label>
+                            <select class="form-control" name="portofloading_id" id="5">
+                                @foreach ($location as $row)
+                                <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
+                                @endforeach
+                            </select>                
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Port Of Discharge</label>
-                            <input type="text" name="portofdischarge" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->portofdischarge }}">
+                            <label for="1">Port OF Discharge</label>
+                            <select class="form-control" name="portofdischarge_id" id="5">
+                                @foreach ($location as $row)
+                                <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
+                                @endforeach
+                            </select>               
+                         </div>
+                        <div class="mb-3">
+                            <label for="1">Place Of Delivery</label>
+                            <select class="form-control" name="placeofdelivery_id" id="5">
+                                @foreach ($location as $row)
+                                <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
+                                @endforeach
+                            </select>                
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Place Of Delivery</label>
-                            <input type="text" name="placeofdelivery" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->placeofdelivery }}">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Final Destination</label>
-                            <input type="text" name="finaldestination" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->finaldestination }}">
+                            <label for="1">Final Destination</label>
+                            <select class="form-control" name="finaldestination_id" id="5">
+                                @foreach ($location as $row)
+                                <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
+                                @endforeach
+                            </select>                
                         </div>
                         <button type="submit" class="btn btn-primary float-right" id="editButton">Submit</button>
                         <a href="/transport" class="btn btn-light">Cancel</a>

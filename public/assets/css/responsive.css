@@ -1,0 +1,63 @@
+@media screen and (max-width : 922px) {
+    
+}
+
+@media screen and (max-width : 576px) {
+    .hero-tagline {
+        line-height: 45px;
+        font-size: 18px;
+    }
+
+    #hero img {
+        width: 62%;
+        height: auto;
+    }
+
+    #hero .aksen-img {
+        width: auto;
+        height: 0;
+    }
+    
+    h2 {
+        font-size: 34px;
+    }
+
+    #hero p{
+        font-size: 14px;
+    }
+    #hero span{
+        font-size: 14px;
+    }
+
+    .rp {
+        z-index: 5;
+    }
+
+    #about {
+        height: 150vh;
+        width: 100%;
+        padding: 100px 0;
+    }
+
+    #about h2 {
+        font-size: 32px;
+        font-weight: 500;
+    }
+
+    #about h3 {
+        font-size: 28px;
+        font-weight: 400;
+    }
+
+    #about p {
+        font-size: 16px;
+    }
+
+    #about span {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width : 350px) {
+
+}

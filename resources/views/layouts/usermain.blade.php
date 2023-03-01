@@ -19,6 +19,9 @@
     {{-- <link rel="stylesheet" href="resources/css/style.css"> --}}
     <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/style.css') !!}">
     {{-- <link href="/assets/css/sb-admin-2.min.css" rel="stylesheet"> --}}
+
+    {{-- responsive --}}
+    <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/responsive.css') !!}">
     
     {{-- Logo --}}
     <link rel="icon" href="assets/img/logojagad2.png">
@@ -29,7 +32,7 @@
 <body>
 
     {{-- Navbar --}}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100">
+    <nav class="navbar navbar-expand-lg navbar-light position-fixed bg-light w-100">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="assets/img/logo.jpeg" alt="" width="30" class="d-inline-block align-text-top me-3">Jagad
@@ -119,11 +122,11 @@
             <div class="row h-100">
                 <div class="col-md-6 hero-tagline my-auto">
                     <h1>Layanan Pengiriman Cepat Untuk Kebutuhan Logistik Anda.</h1>
-                    <p><span class="fw-bold">Jagad Raya Logistik</span> dapat memberikan solusi logistik yang efisien
+                    <p class="rp"><span class="fw-bold">Jagad Raya Logistik</span> dapat memberikan solusi logistik yang efisien
                         dan terintegrasi untuk memenuhi kebutuhan pelanggan.</p>
 
                     <button class="button-lg-primary">Mulai</button>
-                    <a href="#"><img src="assets/img/arrow.png" alt=""></a>
+                    {{-- <a href="#"><img src="assets/img/arrow.png" alt=""></a> --}}
                 </div>
             </div>
 
@@ -270,7 +273,7 @@
                                 <div>
                                 <img src="assets/img/Alamat.png" alt="">
                             </div>
-                                <a href="https://goo.gl/maps/5uiRKqrowj98t11V9" target="_blank">GEDUNG PEMBINA GRAHA
+                                <a href="https://goo.gl/maps/5uiRKqrowj98t11V9" target="_blank" class="location">GEDUNG PEMBINA GRAHA
                                     <br>Lt.3, Ruang 325 <br>
                                     Jl. DI. Panjaitan No.45, Rawa Bunga,<br>
                                     Jatinegara, Jakarta Timur 13350</a>
@@ -278,19 +281,28 @@
 
                             <div class="mb-4">
                                 <img src="assets/img/Telephone.png" alt="">
-                                <a href="tel:+02122895911">021-2289-5911</a>
+                                <a href="tel:+02122895911" class="telephone">021-2289-5911</a>
                             </div>
 
                             <div class="mb-4">
                                 <img src="assets/img/Email.png" alt="">
-                                <a href="mailto: info@jagad-raya.com">info@jagad-raya.com</a>
+                                <a href="mailto: info@jagad-raya.com" class="email">info@jagad-raya.com</a>
+                            </div>
+
+                            <h6>Whatsapp</h6>
+                            <div class="mb-4 d-flex align-items-center">
+                            <a href="https://wa.me/628128327664?text=Halo%2C%20saya%20tertarik%20dengan%20jasa%20yang%20anda%20tawarkan!" target="_blank" class="wa mr-4"><img src="assets/img/whatsapp.png" alt=""></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="card-contact w-100">
-                            <form action="">
+                            <form action="https://formsubmit.co/el/964ef8b86b0c4df2a8200f413b11c4a" method="POST">
                                 <h2>Ada Pertanyaan?</h2>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Nama Lengkap">
+                                    <label for="floatingInput" class="d-flex align-items-center">Nama Lengkap</label>
+                                  </div>
                                 <div class="form-floating mb-3">
                                     <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                                     <label for="floatingInput" class="d-flex align-items-center">Alamat Email</label>

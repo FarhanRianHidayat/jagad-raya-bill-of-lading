@@ -10,6 +10,7 @@ use App\Http\Controllers\ShipperController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ConsigneeController;
 use App\Http\Controllers\TransportController;
+use App\Http\Controllers\LocationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -84,6 +85,13 @@ Route::post('/good/insert',[GoodController::class, 'store'])->name('insert-good'
 Route::get('/good/form-edit/{id}',[GoodController::class, 'edit'])->name('form-edit-good');
 Route::put('/good/update/{id}',[GoodController::class, 'update'])->name('update-good');
 Route::get('/good/delete/{id}',[GoodController::class, 'destroy'])->name('delete-good');
+// Location
+Route::get('/location', [LocationController::class, 'index'])->name('location');
+Route::get('/location/add',[LocationController::class, 'create'])->name('add-location');
+Route::post('/location/insert',[LocationController::class, 'store'])->name('insert-location');
+Route::get('/location/form-edit/{id}',[LocationController::class, 'edit'])->name('form-edit-location');
+Route::put('/location/update/{id}',[LocationController::class, 'update'])->name('update-location');
+Route::get('/location/delete/{id}',[LocationController::class, 'destroy'])->name('delete-location');
 // Login
 // route::get('/login',[LoginController::class,'index'])->name('login')->middleware('guest');
 // route::post('/login',[LoginController::class,'authenticate']);

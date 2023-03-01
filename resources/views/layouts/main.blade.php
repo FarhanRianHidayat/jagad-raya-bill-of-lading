@@ -102,6 +102,9 @@
                 <a class="nav-link" href="/consignee">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Consignee</span></a>
+                    <a class="nav-link" href="/location">
+                        <i class="fas fa-fw fa-cog"></i>
+                        <span>Location</span></a>
                 <a class="nav-link" href="/transport">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Transport</span></a>

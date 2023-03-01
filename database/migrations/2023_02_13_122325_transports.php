@@ -16,13 +16,13 @@ return new class extends Migration
         Schema::create('transports', function (Blueprint $table) {
             $table->id();
             $table->enum('precarriage',['air','sea','road','rail']);
-            $table->string('placeofreceipt');
+            $table->foreignId('placeofreceipt_id');
             $table->string('vessel');
             $table->string('voyagenumber');
-            $table->string('portofloading');
-            $table->string('portofdischarge');
-            $table->string('placeofdelivery');
-            $table->string('finaldestination');
+            $table->foreignId('portofloading_id');
+            $table->foreignId('portofdischarge_id');
+            $table->foreignId('placeofdelivery_id');
+            $table->foreignId('finaldestination_id');
             $table->timestamps();
         });
     }

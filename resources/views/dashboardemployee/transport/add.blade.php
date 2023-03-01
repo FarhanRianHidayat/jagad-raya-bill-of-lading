@@ -22,7 +22,11 @@
                 </div>
                 <div class="form-group">
                     <label for="1">Place Of Receipt</label>
-                    <input type="text" class="form-control" id="2" placeholder="Place Of Receipt" name="placeofreceipt">
+                    <select class="form-control" name="placeofreceipt_id" id="5">
+                        @foreach ($location as $row)
+                        <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
+                        @endforeach
+                    </select>                
                 </div>
                 <div class="form-group">
                     <label for="1">Vessel</label>
@@ -34,19 +38,35 @@
                 </div>
                 <div class="form-group">
                     <label for="1">Port Of Loading</label>
-                    <input type="text" class="form-control" id="5" placeholder="Port Of Loading" name="portofloading">
+                    <select class="form-control" name="portofloading_id" id="5">
+                        @foreach ($location as $row)
+                        <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
+                        @endforeach
+                    </select>                
                 </div>
                 <div class="form-group">
                     <label for="1">Port OF Discharge</label>
-                    <input type="text" class="form-control" id="6" placeholder="Port Of Discharge" name="portofdischarge">
-                </div>
+                    <select class="form-control" name="portofdischarge_id" id="5">
+                        @foreach ($location as $row)
+                        <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
+                        @endforeach
+                    </select>               
+                 </div>
                 <div class="form-group">
                     <label for="1">Place Of Delivery</label>
-                    <input type="text" class="form-control" id="7" placeholder="Place Of Delivery" name="placeofdelivery">
+                    <select class="form-control" name="placeofdelivery_id" id="5">
+                        @foreach ($location as $row)
+                        <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
+                        @endforeach
+                    </select>                
                 </div>
                 <div class="form-group">
                     <label for="1">Final Destination</label>
-                    <input type="text" class="form-control" id="8" placeholder="Final Destination" name="finaldestination">
+                    <select class="form-control" name="finaldestination_id" id="5">
+                        @foreach ($location as $row)
+                        <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
+                        @endforeach
+                    </select>                
                 </div>
                 <button type="submit" class="btn btn-primary mr-2">Submit</button>
                 <a href="/transport" class="btn btn-light">Cancel</a>

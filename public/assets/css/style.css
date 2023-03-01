@@ -58,6 +58,10 @@ body {
     z-index: -4;
  }
 
+ .rp {
+    z-index: 5;
+ }
+
 .hero-tagline h1{
     color: #fff;
     font-weight: 700;
@@ -236,6 +240,44 @@ span {
     color: #ffffff;
 }
 
+.wa img {
+ height: 45px;
+ width: 200px;
+}
+
+.email {
+    background-color: transparent;
+    width: 190px;
+}
+.email:hover {
+    background-color: white;
+    color: #000000;
+    width: 190px;
+    border-radius: 3px;
+}
+
+.telephone {
+    background-color: transparent;
+    width: 120px;
+}
+.telephone:hover {
+    background-color: white;
+    color: #000000;
+    width: 120px;
+    border-radius: 3px;
+}
+
+.location {
+    background-color: transparent;
+    width: 300px;
+}
+.location:hover {
+    background-color: white;
+    color: #000000;
+    width: 300px;
+    border-radius: 3px;
+}
+
 .kontak h6 {
     font-weight: 600;
     font-size: 18px;
@@ -265,7 +307,7 @@ span {
 
 .card-contact{
     width: 100%;
-    height: 445px;
+    height: 520px;
     background-color:  #f6f9fe;
     border-radius: 5px;
     padding: 52px 48px;
