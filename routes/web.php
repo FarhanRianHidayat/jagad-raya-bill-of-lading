@@ -1,12 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GoodController;
+use App\Http\Controllers\MainController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ShipperController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ConsigneeController;
 use App\Http\Controllers\TransportController;
-use App\Http\Controllers\GoodController;
-use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,9 +26,28 @@ Route::get('/', function () {
     return view('layouts.usermain');
 }); 
 
-Route::get('/dashboard', function () {
-    return view('layouts.main');
-});
+Route::get('/track', function () {
+    return view('layouts.track');
+}); 
+
+// Route::get('/dashboard', function () {
+//     return view('layouts.main');
+// });
+
+//Role
+Route::get('/layouts/main',[MainController::class,'indexAdmin'])->middleware('admin');
+Route::get('/layouts/main',[MainController::class,'indexEmployee'])->middleware('employee');
+
+route::get('/dashboardadmin',[AdminController::class,'index'])->name('dashboard')->middleware('admin');
+route::get('/dashboardemployee',[AdminController::class,'index'])->name('dashboard')->middleware('employee');
+
+
+// Login
+route::get('/login',[LoginController::class,'index'])->name('login')->middleware('guest');
+route::post('/login',[LoginController::class,'authenticate']);
+route::post('/logout',[LoginController::class,'logout']);
+route::get('/register',[RegisterController::class,'index'])->name('register');
+route::post('/register',[RegisterController::class,'store']);
 
 // User
 Route::get('/user', [UserController::class, 'index'])->name('user');
@@ -63,8 +85,8 @@ Route::get('/good/form-edit/{id}',[GoodController::class, 'edit'])->name('form-e
 Route::put('/good/update/{id}',[GoodController::class, 'update'])->name('update-good');
 Route::get('/good/delete/{id}',[GoodController::class, 'destroy'])->name('delete-good');
 // Login
-route::get('/login',[LoginController::class,'index'])->name('login')->middleware('guest');
-route::post('/login',[LoginController::class,'authenticate']);
-route::post('/logout',[LoginController::class,'logout']);
+// route::get('/login',[LoginController::class,'index'])->name('login')->middleware('guest');
+// route::post('/login',[LoginController::class,'authenticate']);
+// route::post('/logout',[LoginController::class,'logout']);
 // route::get('/registrasi',[RegisterController::class,'index'])->name('registrasi');
 // route::post('/registrasi',[RegisterController::class,'store']);

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Login</title>
+    <title>Register</title>
 
     <!-- Custom fonts for this template-->
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -29,7 +29,7 @@
         <!-- Outer Row -->
         <div class="row justify-content-center">
 
-            <div class="col-xl-10 col-lg-12 col-md-9" style="margin-top: 7vw">
+            <div class="col-xl-10 col-lg-12 col-md-9 mt-5">
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
@@ -39,17 +39,26 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        {{-- <h1 class="h4 text-gray-900 mb-4">Please sign-up your account</h1> --}}
                                     </div>
-                                    <form id="formAuthentication" class="mb-3" action="/login" method="POST">
+                                    <p class="mb-4">Please sign-up your account </p>
+
+                                    <form id="formAuthentication" class="mb-3" action="/register" method="POST">
                                         @csrf
                                         <div class="mb-3">
-                                            <label for="email" class="form-label"> Username</label>
+                                            <label for="email" class="form-label">Username</label>
                                             <input type="text" class="form-control" id="name" name="name"
-                                                placeholder="Enter your email or username" autofocus />
+                                                placeholder="Enter your username" autofocus />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="text" class="form-control" id="email" name="email"
+                                                placeholder="Enter your email" autofocus />
                                         </div>
                                         <div class="mb-3 form-password-toggle">
-                                            <label class="form-label" for="password">Password</label>
+                                            <div class="d-flex justify-content-between">
+                                                <label class="form-label" for="password">Password</label>
+                                            </div>
                                             <div class="input-group input-group-merge">
                                                 <input type="password" id="password" class="form-control"
                                                     name="password"
@@ -59,19 +68,18 @@
                                                         class="bx bx-hide"></i></span> --}}
                                             </div>
                                         </div>
-                                        {{-- <div class="mb-3">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="remember-me" />
-                                                <label class="form-check-label" for="remember-me"> Remember Me </label>
-                                            </div>
-                                        </div> --}}
                                         <div class="mb-3">
-                                            <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
+                                            <button class="btn btn-primary d-grid w-100" type="submit">Sign up</button>
                                         </div>
+
                                     </form>
-                                    <center>
-                                    <a href="/register" style="font-size: 13px; text-align:center;">Don't have an account?</a>
-                                    </center>
+
+                                    <p class="text-center">
+                                        <span>Already have an account?</span>
+                                        <a href="/">
+                                            <span>Sign In</span>
+                                        </a>
+                                    </p>
                                 </div>
                             </div>
                         </div>

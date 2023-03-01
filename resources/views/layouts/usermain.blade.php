@@ -18,9 +18,10 @@
     {{-- style --}}
     {{-- <link rel="stylesheet" href="resources/css/style.css"> --}}
     <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/style.css') !!}">
-
+    {{-- <link href="/assets/css/sb-admin-2.min.css" rel="stylesheet"> --}}
+    
     {{-- Logo --}}
-    <link rel="icon" href="assets/img/logo.jpeg">
+    <link rel="icon" href="assets/img/logojagad2.png">
 
     <title>Jagad Raya</title>
 </head>
@@ -51,12 +52,62 @@
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
+
+                    
                 </ul>
 
-                <div>
-                    <a href="" class="btn btn-primary">Daftar</a>
+                {{-- <div>
+                    <a href="/register" class="btn btn-primary {{ Request::is('login') ? 'active' : '' }}">Daftar</a>
                     <a href="/login" class=" btn btn-light {{ Request::is('login') ? 'active' : '' }}"> Login</a>
-                </div>
+                </div> --}}
+                <ul class="navbar-nav ml-auto">
+                    @auth
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ auth()->user()->name }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="userDropdown">
+                            @can('admin')
+                            <a class="dropdown-item" href="/dashboardadmin"><i
+                                        class="bi bi-layout-text-sidebar-reverse"></i> Dashboard</a>
+                            
+                                <hr class="dropdown-divider">
+                            
+                            @endcan
+                            @can('employee')
+                            <a class="dropdown-item" href="/dashboardemployee"><i
+                                        class="bi bi-layout-text-sidebar-reverse"></i> Dashboard</a>
+                            
+                                <hr class="dropdown-divider">
+                            
+                            @endcan
+                            @can('user')
+                            <a class="dropdown-item" href="/track"><i
+                                        class="bi bi-layout-text-sidebar-reverse"></i>Track</a>
+                            
+                                <hr class="dropdown-divider">
+                            
+                            @endcan
+
+                            <form action="/logout" method="POST">
+                                @csrf
+                                <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-in-left"></i>
+                                    Logout</button>
+                            </form>
+                        </div>
+                                {{-- <img c/lass="img-profile rounded-circle" src="/assets/img/undraw_profile.svg"> --}}
+
+                    </li>
+                    @else
+                        <li class="nav-item1">
+                            <a href="/register" class="btn btn-primary {{ Request::is('login') ? 'active' : '' }}">Daftar</a>
+                        </li>
+                        <li class="nav-item2">
+                    <a href="/login" class=" btn btn-light {{ Request::is('login') ? 'active' : '' }}"> Login</a>
+                        </li>
+                    @endauth
+                </ul>
 
             </div>
         </div>

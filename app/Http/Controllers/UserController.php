@@ -17,12 +17,12 @@ class UserController extends Controller
 
             $data = user::paginate(5);
         }
-        return view('user.table', compact('data'));
+        return view('dashboardadmin.user.table', compact('data'));
     }
 
     public function create(){
         $data = User::all();
-        return view('user.add',[
+        return view('dashboardadmin.user.add',[
             'data' => $data
         ]);
     }
@@ -46,7 +46,7 @@ class UserController extends Controller
     public function edit($id){
         $data = User::find($id);
 
-        return view('user.edit',[
+        return view('dashboardadmin.user.edit',[
             'data' => $data
         ]);
     }
