@@ -12,6 +12,6 @@ class location extends Model
     protected $guarded = [''];
 
     public function transport(){
-        return $this->hasMany(transport::class);
-        }
+    return $this->hasMany(transport::class);
+    }
 }

@@ -36,14 +36,14 @@
                                 <th scope="col">Place Of Receipt</th>
                                 <th scope="col">Vessel</th>
                                 <th scope="col">Voyage Number</th>
-                                <th scope="col">Port Of Loading</th>
+                                {{-- <th scope="col">Port Of Loading</th>
                                 <th scope="col">Port Of Discharge</th>
                                 <th scope="col">Place Of Delivery</th>
-                                <th scope="col">Final Destination</th>
+                                <th scope="col">Final Destination</th> --}}
                                 <th scope="col">Action</th>
                         </thead>
                         <tbody>
-                            @foreach ($data as $row)
+                            @foreach ($transport as $row)
                             <tr>
                                 {{-- <th scope="row">{{ $index + $kategoris->firstItem() }}</th> --}}
                                 <td>{{ $loop->iteration }}</td>
@@ -51,10 +51,10 @@
                                 <td>{{ $row->location->name_of_location }}</td>
                                 <td>{{ $row->vessel }}</td>
                                 <td>{{ $row->voyagenumber }}</td>
+                                {{-- <td>{{ $row->location->name_of_location }}</td>
                                 <td>{{ $row->location->name_of_location }}</td>
                                 <td>{{ $row->location->name_of_location }}</td>
-                                <td>{{ $row->location->name_of_location }}</td>
-                                <td>{{ $row->location->name_of_location }}</td>
+                                <td>{{ $row->location->name_of_location }}</td> --}}
                                 <td>
                                     <a href="/transport/form-edit/{{ $row->id }}" class="text-warning">
                                         <button type="button" class="btn btn-icon rounded-circle btn-outline-warning">

@@ -9,25 +9,25 @@ use Illuminate\Http\Request;
 class TransportController extends Controller
 {
     public function index(Request $request){
+        $transport = transport::all();
         $location = location::all();
-        $data = transport::all();
         if($request->has('search')){
-            $data = transport::where('name','LIKE','%' .$request->search.'%')->paginate(5);
+            $transport = transport::where('name','LIKE','%' .$request->search.'%')->paginate(5);
             // $data = consignee::where('email','LIKE','%' .$request->search.'%')->paginate(15);
         } else{
             // $data = consignee::where('email','LIKE','%' .$request->search.'%')->paginate(15);
 
-            $data = transport::paginate(5);
+            $transport = transport::paginate(5);
         }
         return view('dashboardemployee.transport.table',[
-            'data' => $data,
-            'location' =>$location
-        ],compact('data') );
+            'transport' => $transport,
+            'location' => $location
+        ],compact('transport') );
     }
 
     public function create(){
         return view('dashboardemployee.transport.add',[
-            'data' => transport::all(),
+            'transport' => transport::all(),
             'location' => location::all()
         ]);
     }
@@ -35,13 +35,13 @@ class TransportController extends Controller
     public function store(Request $request){
         $validasi = $this->validate($request,[
             'precarriage' => ['required'],
-            'placeofreceipt_id' => ['required'],
+            'location_id' => ['required'],
             'vessel' => ['required'],
             'voyagenumber' => ['required'],
-            'portofloading_id' => ['required'],
-            'portofdischarge_id' => ['required'],
-            'placeofdelivery_id' => ['required'],
-            'finaldestination_id' => ['required'],
+            // 'location2_id' => ['required'],
+            // 'portofdischarge_id' => ['required'],
+            // 'placeofdelivery_id' => ['required'],
+            // 'finaldestination_id' => ['required'],
         ]);
 
         transport::create($validasi);
@@ -51,22 +51,22 @@ class TransportController extends Controller
 
     public function edit($id){
         return view('dashboardemployee.transport.edit',[
-            'data' => transport::find($id),
+            'transport' => transport::find($id),
             'location' => location::all('name_of_location')
         ]);
     }
 
     public function update(Request $request, $id){
 
-        $data = transport::find($id);
-        $data->update($request->all());
+        $transport = transport::find($id);
+        $transport->update($request->all());
 
         return redirect()->route('transport')->with('edit','Data berhasil di Ubah!');
     }
 
     public function destroy($id){
-        $data = transport::find($id);
-        $data->delete();
+        $transport = transport::find($id);
+        $transport->delete();
 
         return redirect()->route('transport')->with('delete','Data berhasil di Hapus!');
     }
