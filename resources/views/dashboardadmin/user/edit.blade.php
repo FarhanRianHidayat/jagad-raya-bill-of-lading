@@ -6,7 +6,7 @@
 <div class="col-12 grid-margin stretch-card">
     <div class="card">
         <div class="card-header">
-            <h4 class="card-title m-0 font-weight-bold text-primary">Tambah Data Fasilitas Kamar</h4>
+            <h4 class="card-title m-0 font-weight-bold text-primary">Edit User</h4>
         </div>
         <div class="card-body">
             <form action="/user/update/{{ $data->id }}" method="post" enctype="multipart/form-data">

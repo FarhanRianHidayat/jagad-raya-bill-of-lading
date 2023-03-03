@@ -22,7 +22,7 @@
                 </div>
                 <div class="form-group">
                     <label for="1">Place Of Receipt</label>
-                    <select class="form-control" name="placeofreceipt_id" id="5">
+                    <select class="form-control" name="location_id" id="5">
                         @foreach ($location as $row)
                         <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
                         @endforeach
@@ -36,23 +36,23 @@
                     <label for="1">Voyage Number</label>
                     <input type="text" class="form-control" id="4" placeholder="Voyage Number" name="voyagenumber">
                 </div>
-                <div class="form-group">
+                {{-- <div class="form-group">
                     <label for="1">Port Of Loading</label>
-                    <select class="form-control" name="portofloading_id" id="5">
+                    <select class="form-control" name="location2_id" id="5">
                         @foreach ($location as $row)
                         <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
                         @endforeach
                     </select>                
-                </div>
-                <div class="form-group">
+                </div> --}}
+                {{-- <div class="form-group">
                     <label for="1">Port OF Discharge</label>
                     <select class="form-control" name="portofdischarge_id" id="5">
                         @foreach ($location as $row)
                         <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
                         @endforeach
                     </select>               
-                 </div>
-                <div class="form-group">
+                 </div> --}}
+                {{-- <div class="form-group">
                     <label for="1">Place Of Delivery</label>
                     <select class="form-control" name="placeofdelivery_id" id="5">
                         @foreach ($location as $row)
@@ -67,7 +67,7 @@
                         <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
                         @endforeach
                     </select>                
-                </div>
+                </div> --}}
                 <button type="submit" class="btn btn-primary mr-2">Submit</button>
                 <a href="/transport" class="btn btn-light">Cancel</a>
             </form>

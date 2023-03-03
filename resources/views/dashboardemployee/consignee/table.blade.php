@@ -23,7 +23,7 @@
             <input type="search" id="inputPassword6" name="search" class="form-control" aria-describedby="passwordHelpInline" placeholder="Search...">
         </form>
 </div>
-<div>
+</div>
     <section class="section">
         <div class="card">
             <div class="card-body">

@@ -15,10 +15,6 @@ body {
     box-shadow: 5 0 0 0 #000000;
 }
 
-* {
-    /* z-index: 2; */
-}
-
 .navbar-brand {
     font-weight: 700;
     font-size: 20px;
@@ -35,27 +31,90 @@ body {
 /* content */
 
 .content {
-    /* position: fixed; */
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background: #f1f2f6;
+    padding: 30px 50px 30px 50px;
+    border-radius: 5px;
+}
+
+.content .atas h6 {
+    margin-top: 20px;
+}
+
+.content .atas {
+    margin-bottom: 50px;
+}
+
+.atas h6 {
+    font-size: 18px;
+}
+
+.kotak-dalam {
+    padding: 20px 0 50px 0;
+    background: #3385ff;
+}
+
+.kotak-dalam .line {
+    border-left: 2px solid grey;
+    height: 30px;
+}
+
+.kotak-dalam-2 {
+    padding: 20px 0 90px 0;
+    background: #3385ff;
+}
+
+.tengah {
+    margin-bottom: 30px;
+    /* margin-left: 20%; */
+    background-size: auto;
+}
+
+.progress-1 {
+    width: auto;
+    /* width: 200px; */
+    height: 15px;
+    background-color: #000000;
+    border-radius: 5px;
+}
+
+.progress-2 {
+    background-color: #d2d4db;
+    height: 15px;
+    border-radius: 5px;
+    width: auto;
+}
+
+.progress-3 {
+    background-size: cover;
+    background-color: #d2d4db;
+    height: 15px;
+    border-radius: 5px;
+    width: auto;
+}
+
+.row .col-4 h6 {
+    margin-top: 20px;
 }
 
 
-.maps iframe {
-    /* position:absolute; */
-    width: 100%;
-    height: 800px;
-    z-index: -1;
+
+.bawah h6 {
+    font-size: 16px;
 }
-.isi {
-    /* z-index: 1; */
+
+.bawah p {
+    font-size: 14;
 }
 
 /* footer */
 
 footer {
-    margin-top: 50%;
+    /* margin-top: 50%; */
     /* z-index: 2; */
     width: 100%;
-    height: 270px;
+    height: 250px;
     background: hsl(0, 0%, 98%);
 }
 
@@ -70,6 +129,7 @@ footer img {
     font-weight: normal;
     font-size: 14px;
     line-height: 21px;
+    margin-top: 100px;
 }
 
 footer a {
@@ -118,4 +178,13 @@ footer a {
     background-clip: padding-box;
     border: 1px solid #e3e6f0;
     border-radius: .20rem
+}
+
+
+.modal-body input {
+    width: 467px;
+}
+
+.nav-link p {
+    color: black;
 }

@@ -16,6 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     {{-- style --}}
+    <link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
     {{-- <link rel="stylesheet" href="resources/css/style.css"> --}}
     <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/style2.css') !!}">
     {{-- <link href="/assets/css/sb-admin-2.min.css" rel="stylesheet"> --}}
@@ -29,7 +31,7 @@
 <body>
 
     {{-- Navbar --}}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
         <div class="container">
             <a class="navbar-brand" href="/">
                 <img src="assets/img/logo.jpeg" alt="" width="30" class="d-inline-block align-text-top me-3">Jagad
@@ -114,8 +116,86 @@
     </nav>
     {{-- content --}}
 
-    <div class="content">
-        
+    <div class="container">
+        <div class="search">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cariModal">
+                <p><b>Search Track</b>
+                    <i class="fa fa-search"></i>
+                </p>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="atas">
+                <h6><b>Tracking Number</b></h6>
+                <div class="row">
+                    <div class="col-6">
+                        <h6><b>Expected Delivery by</b></h6>
+                        <div class="kotak-dalam d-flex">
+                            <p>Tanggal</p>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <h6>Status</h6>
+                        <div class="kotak-dalam-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tengah">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="progress-1">
+                        </div>
+                        <center>
+                            <h6>Accepted</h6>
+                        </center>
+                    </div>
+                    <div class="col-4">
+                        <div class="progress-2">
+                        </div>
+                        <center>
+                            <h6>Shipping</h6>
+                        </center>
+                    </div>
+                    <div class="col-4">
+                        <div class="progress-3">
+                        </div>
+                        <center>
+                            <h6>Arrived</h6>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <div class="bawah">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed border-opacity-10" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <h6>
+                                    <b>Order Details</b>
+                                </h6>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Order Date:</p>
+                                <p>Ship Date:</p>
+                                <p>Shipping Address:</p>
+                                <p>Destination:</p>
+                                <p>Carrier:</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -134,16 +214,28 @@
                         <a href="#contact">Contact</a>
                     </div>
                 </div>
-                <div class="row position-absolute copyright start-50 translate-middle">
-                    <div class="col-12">
-                        <p>© 2023 Jagad Raya Logistik All Rights Reserved
-                        </p>
-                    </div>
+                <div class="row copyright start-50">
+                    <center>
+                        <div class="col-12">
+                            <p>© 2023 Jagad Raya Logistik All Rights Reserved
+                            </p>
+                        </div>
+                    </center>
                 </div>
             </div>
         </div>
     </footer>
 
+    <div class="modal fade" id="cariModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <input type="search" id="inputPassword6" name="search" class="form-control"
+                        aria-describedby="passwordHelpInline" placeholder="Search...">
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

@@ -223,37 +223,27 @@
     </section>
 
     {{-- About Us --}}
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2>Tentang Kami</h2>
-                    <span class="sub-judul mt-5">Berikut merupakan sejarah singkat beserta penjelasan lengkap mengenai
-                        Perusahaan kami:</span>
-                    <div class="about">
-                        <hr>
-                        <h3 class="sub-about mt-3">PT. JAGAD RAYA LOGISTIK</h3>
-                        <hr>
-                        <p class="sub-p1 mt-4">PT. Jagad Raya Logistik Indonesia International Freights & Forwarding menawarkan layanan
-                            pengiriman barang baik impor maupun ekspor secara global. Dengan jaringan mitra dan agen
-                            yang luas di seluruh dunia, kami dapat memberikan harga terbaik dan pilihan rute dengan
-                            harga paling eﬁsien.</p>
-
-                        <p class="sub-p2 mt-3">Sebagai salah satu perusahaan International Freight Forwarder terkemuka di Indonesia yang
-                            telah berpengalaman melayani jasa perdagangan ekspor dan impor lebih dari 15 tahun. Kami
-                            senantiasa beradaptasi dengan kebutuhan pasar sehingga menjadi
-                            International Freight Forwarder terbaik saat ini yang selalu berkomitmen untuk melebihi
-                            harapan para customer kami.</p>
-
-                        <p class="sub-p3 mt-3">Kami telah memiliki ijin usaha lengkap untuk melakukan kegiatan usaha ekspor dan impor dari
-                            kementrian perdagangan pemerintah Indonesia.
-                            Komitmen kami melalui dukungan penuh staﬀ khusus memantau dalam proses pengiriman kargo
-                            pelanggan kami.
-                            Staﬀ kami dengan senang hati untuk memberikan konsultasi gratis kebutuhan kargo anda.</p>
-                            <hr class="sub-hr mt-5">
-                    </div>
-                </div>
-            </div>
+    <div class="about-text">
+        <h6>About Us</h6>
+        <center>
+            <hr>
+        </center>
+    </div>
+    <section class="main1">
+        <div class="main">
+            <h1 style="font-size: 45px">
+                LANDING PAGE <br />
+                TEMPLATE
+            </h1>
+            <h5 style="font-size: 20px; padding-top: 20px">LOREM IPSUM TITLE</h5>
+            <p style="padding-top: 10px;">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus, facilis.<br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, molestiae.<br />
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+            </p>
+        </div>
+        <div class="card-1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque numquam harum neque exercitationem voluptatibus, quae rem qui, laudantium incidunt tempora iusto. Quibusdam, deleniti veritatis. Sunt quam voluptate eos fuga, perspiciatis quo eveniet culpa doloribus dolor nobis, commodi iusto nam nemo. Reiciendis iste nesciunt, minus quasi earum expedita eligendi doloremque eveniet aliquid itaque vitae ex, sint sequi iusto odit. Ad fuga dolores, magni repellat consequatur qui deleniti vel nulla architecto labore eum totam accusantium nemo assumenda enim? Sint numquam dignissimos aperiam.</p>
         </div>
     </section>
 
