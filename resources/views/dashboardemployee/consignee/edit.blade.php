@@ -13,6 +13,10 @@
                         @csrf
                         @method('put')
                         <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">B/L Number</label>
+                            <input type="text" name="bolnumber" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->bolnumber }}">
+                        </div>
+                        <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Name</label>
                             <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->name }}">
                         </div>

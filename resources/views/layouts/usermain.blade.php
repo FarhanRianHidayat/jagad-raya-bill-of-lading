@@ -26,7 +26,7 @@
     {{-- Logo --}}
     <link rel="icon" href="assets/img/logojagad2.png">
 
-    <title>Jagad Raya</title>
+    <title>PT. JAGAD RAYA LOGISTIK</title>
 </head>
 
 <body>
@@ -223,27 +223,24 @@
     </section>
 
     {{-- About Us --}}
-    <div class="about-text">
-        <h6>About Us</h6>
+    <div class="about-text mt-5" id="about">
+        <h6>Tentang <span>Kami</span></h6>
         <center>
             <hr>
         </center>
     </div>
-    <section class="main1">
+    <section class="about mt-5">
         <div class="main">
             <h1 style="font-size: 45px">
-                LANDING PAGE <br />
-                TEMPLATE
+                JAGAD RAYA LOGISTIK
             </h1>
-            <h5 style="font-size: 20px; padding-top: 20px">LOREM IPSUM TITLE</h5>
+            <h5 style="font-size: 20px; padding-top: 20px">Deskripsi Perusahaan kami:</h5>
             <p style="padding-top: 10px;">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus, facilis.<br />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, molestiae.<br />
-                Lorem ipsum dolor sit amet consectetur adipisicing.
+                PT. Jagad Raya Logistik Indonesia International Freights & Forwarding <br /> menawarkan layanan pengiriman barang baik impor maupun ekspor. <br /> Dengan jaringan mitra dan agen yang luas di seluruh dunia<br /> kami dapat memberikan harga terbaik dan pilihan rute paling eﬁsien.<br />
             </p>
         </div>
         <div class="card-1">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque numquam harum neque exercitationem voluptatibus, quae rem qui, laudantium incidunt tempora iusto. Quibusdam, deleniti veritatis. Sunt quam voluptate eos fuga, perspiciatis quo eveniet culpa doloribus dolor nobis, commodi iusto nam nemo. Reiciendis iste nesciunt, minus quasi earum expedita eligendi doloremque eveniet aliquid itaque vitae ex, sint sequi iusto odit. Ad fuga dolores, magni repellat consequatur qui deleniti vel nulla architecto labore eum totam accusantium nemo assumenda enim? Sint numquam dignissimos aperiam.</p>
+            <p>Sebagai salah satu perusahaan International Freight Forwarder terkemuka di Indonesia yang telah berpengalaman melayani jasa perdagangan ekspor dan impor lebih dari 15 tahun. Kami senantiasa beradaptasi dengan kebutuhan pasar sehingga menjadi International Freight Forwarder terbaik saat ini yang selalu berkomitmen untuk melebihi harapan para customer kami. <br /> Kami telah memiliki ijin usaha lengkap untuk melakukan kegiatan usaha ekspor dan impor dari kementrian perdagangan pemerintah Indonesia.</p>
         </div>
     </section>
 
@@ -281,7 +278,7 @@
 
                             <h6>Whatsapp</h6>
                             <div class="mb-4 d-flex align-items-center">
-                            <a href="https://wa.me/628128327664?text=Halo%2C%20saya%20tertarik%20dengan%20jasa%20yang%20anda%20tawarkan!" target="_blank" class="wa mr-4"><img src="assets/img/whatsapp.png" alt=""></a>
+                            <a href="https://wa.me/628128327664?text=Halo%2C%20saya%20tertarik%20dengan%20jasa%20yang%20anda%20tawarkan!" target="_blank" class="wa mr-5"><img src="assets/img/whatsapp.png" alt="" class="mt-2"></a>
                             </div>
                         </div>
                     </div>

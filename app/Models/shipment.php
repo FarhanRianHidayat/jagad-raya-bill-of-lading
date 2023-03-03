@@ -5,10 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class transport extends Model
+class shipment extends Model
 {
     use HasFactory;
-    protected $table = 'transports';
-    protected $guarded = [''];
-
 }

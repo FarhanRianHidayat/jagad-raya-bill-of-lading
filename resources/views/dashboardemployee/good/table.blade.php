@@ -37,7 +37,6 @@
                                 <th scope="col">Description of Goods</th>
                                 <th scope="col">Gross weight</th>
                                 <th scope="col">Measurement</th>
-                                <th scope="col">BOL Number</th>
                                 <th scope="col">Action</th>
                         </thead>
                         <tbody>
@@ -50,7 +49,6 @@
                                 <td>{{ $row->description }}</td>
                                 <td>{{ $row->grossweight }}</td>
                                 <td>{{ $row->measurement }}</td>
-                                <td>{{ $row->bolnumber }}</td>
                                 <td>
                                     <a href="/good/form-edit/{{ $row->id }}" class="text-warning">
                                         <button type="button" class="btn btn-icon rounded-circle btn-outline-warning">

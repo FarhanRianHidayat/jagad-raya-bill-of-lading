@@ -31,6 +31,7 @@ class ConsigneeController extends Controller
 
     public function store(Request $request){
         $validasi = $this->validate($request,[
+            'bolnumber' => ['required'],
             'name' => ['required'],
             'address' => ['required'],
             'telephone' => ['required'],
@@ -50,6 +51,7 @@ class ConsigneeController extends Controller
 
     public function update(Request $request, $id){
         $validasi = $this->validate($request,[
+            'bolnumber' => ['required'],
             'name' => ['required'],
             'address' => ['required'],
             'telephone' => ['required'],

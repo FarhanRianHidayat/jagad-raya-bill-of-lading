@@ -1,4 +1,4 @@
-@media screen and (max-width : 922px) {
+/* @media screen and (max-width : 922px) {
     
 }
 
@@ -33,13 +33,13 @@
         z-index: 5;
     }
 
-    #about {
-        height: 150vh;
+    /* #about {
+        /* height: 150vh;
         width: 100%;
-        padding: 100px 0;
-    }
+        padding: 100px 0; */
+    
 
-    #about h2 {
+    /* #about h2 {
         font-size: 32px;
         font-weight: 500;
     }
@@ -56,8 +56,8 @@
     #about span {
         font-size: 18px;
     }
-}
+
 
 @media screen and (max-width : 350px) {
 
-}
+} */ 

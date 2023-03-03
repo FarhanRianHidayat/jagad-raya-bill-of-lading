@@ -34,7 +34,6 @@ class GoodController extends Controller
             'description' => ['required'],
             'grossweight' => ['required'],
             'measurement' => ['required'],
-            'bolnumber' => ['required'],
         ]);
 
         good::create($validasi);
@@ -55,7 +54,6 @@ class GoodController extends Controller
             'description' => ['required'],
             'grossweight' => ['required'],
             'measurement' => ['required'],
-            'bolnumber' => ['required'],
         ]);
 
         good::where('id',$id)->update($validasi);

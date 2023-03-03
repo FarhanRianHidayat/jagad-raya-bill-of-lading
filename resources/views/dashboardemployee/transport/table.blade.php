@@ -33,13 +33,13 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Pre-carriage by</th>
-                                <th scope="col">Place Of Receipt</th>
                                 <th scope="col">Vessel</th>
                                 <th scope="col">Voyage Number</th>
-                                {{-- <th scope="col">Port Of Loading</th>
+                                <th scope="col">Place Of Receipt</th>
+                                <th scope="col">Port Of Loading</th>
                                 <th scope="col">Port Of Discharge</th>
                                 <th scope="col">Place Of Delivery</th>
-                                <th scope="col">Final Destination</th> --}}
+                                <th scope="col">Final Destination</th>
                                 <th scope="col">Action</th>
                         </thead>
                         <tbody>
@@ -48,13 +48,14 @@
                                 {{-- <th scope="row">{{ $index + $kategoris->firstItem() }}</th> --}}
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $row->precarriage }}</td>
-                                <td>{{ $row->location->name_of_location }}</td>
                                 <td>{{ $row->vessel }}</td>
                                 <td>{{ $row->voyagenumber }}</td>
-                                {{-- <td>{{ $row->location->name_of_location }}</td>
-                                <td>{{ $row->location->name_of_location }}</td>
-                                <td>{{ $row->location->name_of_location }}</td>
-                                <td>{{ $row->location->name_of_location }}</td> --}}
+                                <td>{{ $row->placeofreceipt }}</td>
+                                <td>{{ $row->portofloading }}</td>
+                                <td>{{ $row->portofdischarge }}</td>
+                                <td>{{ $row->placeofdelivery }}</td>
+                                <td>{{ $row->finaldestination }}</td>
+                               
                                 <td>
                                     <a href="/transport/form-edit/{{ $row->id }}" class="text-warning">
                                         <button type="button" class="btn btn-icon rounded-circle btn-outline-warning">

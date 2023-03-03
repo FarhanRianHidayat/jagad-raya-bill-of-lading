@@ -34,10 +34,6 @@
                     <label for="1">Measurement</label>
                     <input type="text" class="form-control" id="5" placeholder="Measurement" name="measurement">
                 </div>
-                <div class="form-group">
-                    <label for="1">BOL Number</label>
-                    <input type="text" class="form-control" id="6" placeholder="BOL Number" name="bolnumber">
-                </div>
                 <button type="submit" class="btn btn-primary mr-2">Submit</button>
                 <a href="/good" class="btn btn-light">Cancel</a>
             </form>

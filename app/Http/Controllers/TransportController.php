@@ -10,7 +10,6 @@ class TransportController extends Controller
 {
     public function index(Request $request){
         $transport = transport::all();
-        $location = location::all();
         if($request->has('search')){
             $transport = transport::where('name','LIKE','%' .$request->search.'%')->paginate(5);
             // $data = consignee::where('email','LIKE','%' .$request->search.'%')->paginate(15);
@@ -21,27 +20,25 @@ class TransportController extends Controller
         }
         return view('dashboardemployee.transport.table',[
             'transport' => $transport,
-            'location' => $location
         ],compact('transport') );
     }
 
     public function create(){
         return view('dashboardemployee.transport.add',[
             'transport' => transport::all(),
-            'location' => location::all()
         ]);
     }
 
     public function store(Request $request){
         $validasi = $this->validate($request,[
             'precarriage' => ['required'],
-            'location_id' => ['required'],
             'vessel' => ['required'],
             'voyagenumber' => ['required'],
-            // 'location2_id' => ['required'],
-            // 'portofdischarge_id' => ['required'],
-            // 'placeofdelivery_id' => ['required'],
-            // 'finaldestination_id' => ['required'],
+            'placeofreceipt' => ['required'],
+            'portofloading' => ['required'],
+            'portofdischarge' => ['required'],
+            'placeofdelivery' => ['required'],
+            'finaldestination' => ['required'],
         ]);
 
         transport::create($validasi);
@@ -52,7 +49,6 @@ class TransportController extends Controller
     public function edit($id){
         return view('dashboardemployee.transport.edit',[
             'transport' => transport::find($id),
-            'location' => location::all('name_of_location')
         ]);
     }
 

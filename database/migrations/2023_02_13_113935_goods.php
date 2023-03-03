@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('description');
             $table->string('grossweight');
             $table->string('measurement');
-            $table->string('bolnumber');
             $table->timestamps();
         });
     }

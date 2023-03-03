@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bill of Lading</title>
+    <title>JAGAD BILL OF LADING</title>
 
     <!-- Custom fonts for this template-->
     <link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -102,9 +102,6 @@
                 <a class="nav-link" href="/consignee">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Consignee</span></a>
-                    <a class="nav-link" href="/location">
-                        <i class="fas fa-fw fa-cog"></i>
-                        <span>Location</span></a>
                 <a class="nav-link" href="/transport">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Transport</span></a>

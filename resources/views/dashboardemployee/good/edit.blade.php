@@ -36,10 +36,6 @@
                             <label for="exampleInputEmail1" class="form-label">Measurement</label>
                             <input type="text" name="measurement" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->measurement }}">
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">BOL Number</label>
-                            <input type="text" name="bolnumber" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->bolnumber }}">
-                        </div>
                         <button type="submit" class="btn btn-primary float-right" id="editButton">Submit</button>
                         <a href="/good" class="btn btn-light">Cancel</a>
                     </form>

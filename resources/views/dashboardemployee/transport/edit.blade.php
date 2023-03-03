@@ -22,14 +22,6 @@
                                 <option value="4">Rail</option>
                     </select>
                         </div>
-                <div class="mb-3">
-                    <label for="1" class="form-label">Place Of Receipt</label>
-                    <select class="form-select" name="location_id" id="5">
-                        @foreach ($location as $row)
-                        <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
-                        @endforeach
-                    </select>                
-                </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Vessel</label>
                             <input type="text" name="vessel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $transport->vessel }}">
@@ -38,38 +30,26 @@
                             <label for="exampleInputEmail1" class="form-label">Voyage Number</label>
                             <input type="text" name="voyagenumber" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $transport->voyagenumber }}">
                         </div>
-                        {{-- <div class="mb-3">
-                            <label for="1">Port Of Loading</label>
-                            <select class="form-control" name="portofloading_id" id="5">
-                                @foreach ($location as $row)
-                                <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
-                                @endforeach
-                            </select>                
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Place of Receipt</label>
+                            <input type="text" name="place of receipt" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $transport->placeofreceipt }}">
                         </div>
                         <div class="mb-3">
-                            <label for="1">Port OF Discharge</label>
-                            <select class="form-control" name="portofdischarge_id" id="5">
-                                @foreach ($location as $row)
-                                <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
-                                @endforeach
-                            </select>               
-                         </div>
-                        <div class="mb-3">
-                            <label for="1">Place Of Delivery</label>
-                            <select class="form-control" name="placeofdelivery_id" id="5">
-                                @foreach ($location as $row)
-                                <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
-                                @endforeach
-                            </select>                
+                            <label for="exampleInputEmail1" class="form-label">Port of Loading</label>
+                            <input type="text" name="port of loading" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $transport->portofloading }}">
                         </div>
                         <div class="mb-3">
-                            <label for="1">Final Destination</label>
-                            <select class="form-control" name="finaldestination_id" id="5">
-                                @foreach ($location as $row)
-                                <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
-                                @endforeach
-                            </select>                
-                        </div> --}}
+                            <label for="exampleInputEmail1" class="form-label">Port of Discharge</label>
+                            <input type="text" name="port of discharge" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $transport->portofdischarge }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Place of Delivery</label>
+                            <input type="text" name="place of delivery" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $transport->placeofdelivery }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Final Destination</label>
+                            <input type="text" name="final destination" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $transport->finaldestination }}">
+                        </div>
                         <button type="submit" class="btn btn-primary float-right" id="editButton">Submit</button>
                         <a href="/transport" class="btn btn-light">Cancel</a>
                     </form>

@@ -21,21 +21,34 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="1">Place Of Receipt</label>
-                    <select class="form-control" name="location_id" id="5">
-                        @foreach ($location as $row)
-                        <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
-                        @endforeach
-                    </select>                
-                </div>
-                <div class="form-group">
                     <label for="1">Vessel</label>
-                    <input type="text" class="form-control" id="3" placeholder="Vessel" name="vessel">
+                    <input type="text" class="form-control" id="2" placeholder="Vessel" name="vessel">
                 </div>
                 <div class="form-group">
                     <label for="1">Voyage Number</label>
-                    <input type="text" class="form-control" id="4" placeholder="Voyage Number" name="voyagenumber">
+                    <input type="text" class="form-control" id="3" placeholder="Voyage Number" name="voyagenumber">
                 </div>
+                <div class="form-group">
+                    <label for="1">Place of Receipt</label>
+                    <input type="text" class="form-control" id="4" placeholder="Place of Receipt" name="placeofreceipt">
+                </div>
+                <div class="form-group">
+                    <label for="1">Port of Loading</label>
+                    <input type="text" class="form-control" id="5" placeholder="Port of Loading" name="portofloading">
+                </div>
+                <div class="form-group">
+                    <label for="1">Port of Discharge</label>
+                    <input type="text" class="form-control" id="6" placeholder="Port of Discharge" name="portofdischarge">
+                </div>
+                <div class="form-group">
+                    <label for="1">Place of Delivery</label>
+                    <input type="text" class="form-control" id="7" placeholder="Place of Delivery" name="placeofdelivery">
+                </div>
+                <div class="form-group">
+                    <label for="1">Final Destination</label>
+                    <input type="text" class="form-control" id="8" placeholder="Final Destination" name="finaldestination">
+                </div>
+                
                 {{-- <div class="form-group">
                     <label for="1">Port Of Loading</label>
                     <select class="form-control" name="location2_id" id="5">
