@@ -48,39 +48,11 @@
                     <label for="1">Final Destination</label>
                     <input type="text" class="form-control" id="8" placeholder="Final Destination" name="finaldestination">
                 </div>
-                
-                {{-- <div class="form-group">
-                    <label for="1">Port Of Loading</label>
-                    <select class="form-control" name="location2_id" id="5">
-                        @foreach ($location as $row)
-                        <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
-                        @endforeach
-                    </select>                
-                </div> --}}
-                {{-- <div class="form-group">
-                    <label for="1">Port OF Discharge</label>
-                    <select class="form-control" name="portofdischarge_id" id="5">
-                        @foreach ($location as $row)
-                        <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
-                        @endforeach
-                    </select>               
-                 </div> --}}
-                {{-- <div class="form-group">
-                    <label for="1">Place Of Delivery</label>
-                    <select class="form-control" name="placeofdelivery_id" id="5">
-                        @foreach ($location as $row)
-                        <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
-                        @endforeach
-                    </select>                
-                </div>
                 <div class="form-group">
-                    <label for="1">Final Destination</label>
-                    <select class="form-control" name="finaldestination_id" id="5">
-                        @foreach ($location as $row)
-                        <option value="{{ $row->id }}">{{ $row->name_of_location }}</option>
-                        @endforeach
-                    </select>                
-                </div> --}}
+                    <label for="1">Date</label>
+                    <input type="date" class="form-control" id="8" name="date">
+                </div>
+                
                 <button type="submit" class="btn btn-primary mr-2">Submit</button>
                 <a href="/transport" class="btn btn-light">Cancel</a>
             </form>

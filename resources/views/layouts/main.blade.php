@@ -108,6 +108,9 @@
                 <a class="nav-link" href="/good">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Goods</span></a>
+                <a class="nav-link" href="/shipment">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Shipment</span></a>
             </li>
 
             

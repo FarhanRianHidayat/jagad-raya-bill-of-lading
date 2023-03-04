@@ -50,6 +50,10 @@
                             <label for="exampleInputEmail1" class="form-label">Final Destination</label>
                             <input type="text" name="final destination" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $transport->finaldestination }}">
                         </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $transport->date }}">
+                        </div>
                         <button type="submit" class="btn btn-primary float-right" id="editButton">Submit</button>
                         <a href="/transport" class="btn btn-light">Cancel</a>
                     </form>
