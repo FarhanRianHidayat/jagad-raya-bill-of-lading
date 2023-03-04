@@ -16,6 +16,11 @@ return new class extends Migration
         Schema::create('shipments', function (Blueprint $table) {
             $table->id();
             $table->enum('status',['Accepted','Shipping','Arrived']);
+            $table->foreignId('date_id');
+            $table->date('shipping_date');
+            $table->foreignId('shipping_adress_id');
+            $table->foreignId('finaldestination_id');
+            $table->foreignId('description_id');
             $table->timestamps();
         });
     }

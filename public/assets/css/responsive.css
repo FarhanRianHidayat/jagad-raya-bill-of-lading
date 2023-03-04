@@ -1,9 +1,9 @@
-/* @media screen and (max-width : 922px) {
+ @media screen and (max-width : 922px) {
     
 }
 
 @media screen and (max-width : 576px) {
-    .hero-tagline {
+    .hero-tagline h1 {
         line-height: 45px;
         font-size: 18px;
     }
@@ -33,31 +33,119 @@
         z-index: 5;
     }
 
-    /* #about {
-        /* height: 150vh;
-        width: 100%;
-        padding: 100px 0; */
-    
-
-    /* #about h2 {
-        font-size: 32px;
-        font-weight: 500;
-    }
-
-    #about h3 {
-        font-size: 28px;
-        font-weight: 400;
-    }
-
-    #about p {
+    #jasa span {
         font-size: 16px;
     }
 
-    #about span {
-        font-size: 18px;
+    .about-text h6{
+        font-size: 34px;
+    }
+
+    .about-text span{
+        font-size: 34px;
+    }
+
+    .about-text hr{
+        width: 150px;
+    }
+
+    .about .main h1 {
+        font-size: 24px;
+    }
+
+    .main p {
+        font-size: 14px;
+    }
+
+    .card-1 p {
+        font-size: 14px;
+    }
+
+    .about {
+        margin-bottom: 20vh;
+    }
+
+    .card-1 {
+        width: 460px;
+        height: 440px;
+    } 
+
+}
+
+@media screen and (max-width : 350px) {
+    .hero-tagline h1{
+        font-size: 40px;
+    }
+
+    #hero img {
+        width: 62%;
+        height: auto;
+    }
+
+    .hero-tagline P{
+        font-size: 6px;
     }
 
 
-@media screen and (max-width : 350px) {
 
-} */ 
+    .rp {
+        font-size: 5px;
+    }
+
+    #hero .aksen-img {
+        width: auto;
+        height: 0;
+    }
+    
+    h2 {
+        font-size: 34px;
+    }
+
+    #hero p{
+        font-size: 14px;
+    }
+    #hero span{
+        font-size: 14px;
+    }
+
+    .rp {
+        z-index: 5;
+    }
+
+    #jasa span {
+        font-size: 16px;
+    }
+
+    .about-text h6{
+        font-size: 34px;
+    }
+
+    .about-text span{
+        font-size: 34px;
+    }
+
+    .about-text hr{
+        width: 150px;
+    }
+
+    .about .main h1 {
+        font-size: 24px;
+    }
+
+    .main p {
+        font-size: 14px;
+    }
+
+    .card-1 p {
+        font-size: 14px;
+    }
+
+    .about {
+        margin-bottom: 20vh;
+    }
+
+    .card-1 {
+        width: 460px;
+        height: 440px;
+    } 
+} 

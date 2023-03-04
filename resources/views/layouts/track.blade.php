@@ -25,7 +25,7 @@
     {{-- Logo --}}
     <link rel="icon" href="assets/img/logojagad2.png">
 
-    <title>Jagad Raya</title>
+    <title>Shipment & Container Tracking</title>
 </head>
 
 <body>
@@ -43,16 +43,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item mx-2">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#jasa">Information</a>
+                        <a class="nav-link" href="/#jasa">Information</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="/#about">About</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="/#contact">Contact</a>
                     </li>
 
                     

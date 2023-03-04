@@ -80,7 +80,7 @@
                         </tbody>  
                     </table>
                     <br>
-                    {{-- {{ $data->links() }} --}}
+                    {{ $transport->links() }}
                 </div>
             </div>
         </div>

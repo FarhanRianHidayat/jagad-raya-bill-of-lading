@@ -26,7 +26,7 @@
     {{-- Logo --}}
     <link rel="icon" href="assets/img/logojagad2.png">
 
-    <title>PT. JAGAD RAYA LOGISTIK</title>
+    <title>PT. Jagad Raya Logistik</title>
 </head>
 
 <body>
@@ -231,7 +231,7 @@
     </div>
     <section class="about mt-5">
         <div class="main">
-            <h1 style="font-size: 45px">
+            <h1>
                 JAGAD RAYA LOGISTIK
             </h1>
             <h5 style="font-size: 20px; padding-top: 20px">Deskripsi Perusahaan kami:</h5>
