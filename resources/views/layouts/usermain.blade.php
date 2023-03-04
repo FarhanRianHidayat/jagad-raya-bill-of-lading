@@ -55,6 +55,13 @@
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
+                    @auth
+                        <li class="nav-item mx-2">
+                            @can('user')
+                            <a class="nav-link" href="/track">Track</a>
+                            @endcan
+                        </li>
+                    @endauth
 
                     
                 </ul>
@@ -65,43 +72,59 @@
                 </div> --}}
                 <ul class="navbar-nav ml-auto">
                     @auth
+                    @if (auth()->user()->role == 'user')                        
+                    <form action="/logout" method="POST">
+                                @csrf
+                                <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-in-left"></i>
+                                    Logout</button>
+                    </form>
+                    @endif
+                    @if (auth()->user()->role == 'admin')
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            {{ auth()->user()->name }}
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="userDropdown">
+                        <div class="dropdown-menu dropdown-menu-left" aria-labelledby="userDropdown">
                             @can('admin')
+                            
                             <a class="dropdown-item" href="/dashboardadmin"><i
                                         class="bi bi-layout-text-sidebar-reverse"></i> Dashboard</a>
                             
                                 <hr class="dropdown-divider">
-                            
-                            @endcan
-                            @can('employee')
-                            <a class="dropdown-item" href="/dashboardemployee"><i
-                                        class="bi bi-layout-text-sidebar-reverse"></i> Dashboard</a>
-                            
-                                <hr class="dropdown-divider">
-                            
-                            @endcan
-                            @can('user')
-                            <a class="dropdown-item" href="/track"><i
-                                        class="bi bi-layout-text-sidebar-reverse"></i>Track</a>
-                            
-                                <hr class="dropdown-divider">
-                            
-                            @endcan
-
                             <form action="/logout" method="POST">
                                 @csrf
                                 <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-in-left"></i>
                                     Logout</button>
                             </form>
                         </div>
+                            @endcan
+                        </div>
                                 {{-- <img c/lass="img-profile rounded-circle" src="/assets/img/undraw_profile.svg"> --}}
 
                     </li>
+                    @endif
+                    @if (auth()->user()->role == 'employee')
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="userDropdown">
+                            @can('employee')
+                            <a class="dropdown-item" href="/dashboardemployee"><i
+                                        class="bi bi-layout-text-sidebar-reverse"></i> Dashboard</a>
+                            
+                                <hr class="dropdown-divider">
+                            <form action="/logout" method="POST">
+                                @csrf
+                                <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-in-left"></i>
+                                    Logout</button>
+                            </form>
+                            @endcan
+                        </div>
+                                {{-- <img c/lass="img-profile rounded-circle" src="/assets/img/undraw_profile.svg"> --}}
+
+                    </li>
+                    @endif
                     @else
                         <li class="nav-item1">
                             <a href="/register" class="btn btn-primary {{ Request::is('login') ? 'active' : '' }}">Daftar</a>
@@ -110,6 +133,8 @@
                     <a href="/login" class=" btn btn-light {{ Request::is('login') ? 'active' : '' }}"> Login</a>
                         </li>
                     @endauth
+
+
                 </ul>
 
             </div>

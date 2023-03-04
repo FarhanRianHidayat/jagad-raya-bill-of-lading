@@ -10,4 +10,11 @@ class shipment extends Model
     use HasFactory;
     protected $table = 'shipments';
     protected $guarded = [''];
+
+    public function transport(){
+    return $this->belongsTo(transport::class);
+    }
+    public function good(){
+    return $this->belongsTo(good::class);
+    }
 }

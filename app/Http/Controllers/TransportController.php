@@ -33,6 +33,7 @@ class TransportController extends Controller
             'precarriage' => ['required'],
             'vessel' => ['required'],
             'voyagenumber' => ['required'],
+            'shipping_address' => ['required'],
             'placeofreceipt' => ['required'],
             'portofloading' => ['required'],
             'portofdischarge' => ['required'],

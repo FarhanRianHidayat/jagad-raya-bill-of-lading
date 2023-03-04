@@ -35,6 +35,7 @@
                                 <th scope="col">Pre-carriage by</th>
                                 <th scope="col">Vessel</th>
                                 <th scope="col">Voyage Number</th>
+                                <th scope="col">Address</th>
                                 <th scope="col">Place Of Receipt</th>
                                 <th scope="col">Port Of Loading</th>
                                 <th scope="col">Port Of Discharge</th>
@@ -51,6 +52,7 @@
                                 <td>{{ $row->precarriage }}</td>
                                 <td>{{ $row->vessel }}</td>
                                 <td>{{ $row->voyagenumber }}</td>
+                                <td>{{ $row->shipping_address }}</td>
                                 <td>{{ $row->placeofreceipt }}</td>
                                 <td>{{ $row->portofloading }}</td>
                                 <td>{{ $row->portofdischarge }}</td>

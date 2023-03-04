@@ -31,6 +31,10 @@
                             <input type="text" name="voyagenumber" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $transport->voyagenumber }}">
                         </div>
                         <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Address</label>
+                            <input type="text" name="shipping_address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $transport->shipping_address }}">
+                        </div>
+                        <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Place of Receipt</label>
                             <input type="text" name="place of receipt" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $transport->placeofreceipt }}">
                         </div>

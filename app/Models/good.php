@@ -10,4 +10,8 @@ class good extends Model
     use HasFactory;
     protected $table = 'goods';
     protected $guarded = [''];
+
+    protected function shipment(){
+        return $this->hasMany(shipment::class);
+    }
 }
