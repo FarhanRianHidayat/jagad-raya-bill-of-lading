@@ -247,6 +247,30 @@
         </div>
     </section>
 
+     {{-- Progres --}}
+     <section id="progres">
+        <div class="container mt-5 mb-5">
+            <div class="row text-center justify-content-center gy-4">
+                <div class="col-lg-2 col-sm-6">
+                    <h1 class="display-4 text-center">15+</h1>
+                    <p class="mb-0 text-center">Tahun Beroperasi</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <h1 class="display-4 text-center">10k+</h1>
+                    <p class="mb-0 text-center">Klien Ditangani</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <h1 class="display-4 text-center">6</h1>
+                    <p class="mb-0 text-center">Jenis Jasa</p>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <h1 class="display-4 text-center">100+</h1>
+                    <p class="mb-0 text-center">Jaringan Mitra & Agen</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     {{-- About Us --}}
     <div class="about-text mt-5" id="about">
         <h6>Tentang <span>Kami</span></h6>
@@ -333,7 +357,29 @@
         </div>
     </section>
 
-    <footer class="d-flex align-items-center position-relative">
+    <footer>
+        <div class="footer-top text-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <h4 class="navbar-brand">Jagad Raya<span class="dot">.</span></h4>
+                        <p>Jagad Raya Logistik dapat memberikan solusi logistik yang efisien dan terintegrasi untuk memenuhi kebutuhan pelanggan.</p>
+                        <div class="col-auto social-icons">
+                            <a href="#"><i class='bx bxl-facebook'></i></a>
+                            <a href="#"><i class='bx bxl-twitter'></i></a>
+                            <a href="#"><i class='bx bxl-instagram'></i></a>
+                            <a href="#"><i class='bx bxl-pinterest'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p class="mb-0">Copyright@2023. All rights Reserved</p>
+        </div>
+    </footer>
+
+    {{-- <footer class="d-flex align-items-center position-relative">
         <div class="container-fluid">
             <div class="container">
                 <div class="row">
@@ -356,7 +402,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> --}}
 
     <!-- Optional JavaScript; choose one of the two! -->
 
