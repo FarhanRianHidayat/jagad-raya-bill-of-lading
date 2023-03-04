@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\location;
 use App\Models\transport;
 use Illuminate\Http\Request;
 
@@ -39,6 +38,7 @@ class TransportController extends Controller
             'portofdischarge' => ['required'],
             'placeofdelivery' => ['required'],
             'finaldestination' => ['required'],
+            'date' => ['required'],
         ]);
 
         transport::create($validasi);

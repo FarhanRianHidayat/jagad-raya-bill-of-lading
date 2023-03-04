@@ -10,7 +10,7 @@ use App\Http\Controllers\ShipperController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ConsigneeController;
 use App\Http\Controllers\TransportController;
-use App\Http\Controllers\ShipmentController;
+use App\Http\Controllers\ShipmentsController;
 
 
 /*

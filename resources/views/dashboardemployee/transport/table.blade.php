@@ -40,6 +40,7 @@
                                 <th scope="col">Port Of Discharge</th>
                                 <th scope="col">Place Of Delivery</th>
                                 <th scope="col">Final Destination</th>
+                                <th scope="col">Date</th>
                                 <th scope="col">Action</th>
                         </thead>
                         <tbody>
@@ -55,6 +56,7 @@
                                 <td>{{ $row->portofdischarge }}</td>
                                 <td>{{ $row->placeofdelivery }}</td>
                                 <td>{{ $row->finaldestination }}</td>
+                                <td>{{ $row->date }}</td>
                                
                                 <td>
                                     <a href="/transport/form-edit/{{ $row->id }}" class="text-warning">
