@@ -18,7 +18,7 @@ return new class extends Migration
             $table->enum('precarriage',['Air','Sea','Road','Rail']);
             $table->string('vessel');
             $table->string('voyagenumber');
-            $table->string('shipping_adress');
+            $table->string('shipping_address');
             $table->string('placeofreceipt');
             $table->string('portofloading');
             $table->string('portofdischarge');

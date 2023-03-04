@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 class transport extends Model
 {
@@ -11,4 +12,7 @@ class transport extends Model
     protected $table = 'transports';
     protected $guarded = [''];
 
+    public function shipment(){
+        return $this->hasMany(shipment::class);
+    }
 }

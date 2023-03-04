@@ -146,29 +146,9 @@
                 </div>
             </div>
             <div class="tengah">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="progress-1">
-                        </div>
-                        <center>
-                            <h6>Accepted</h6>
-                        </center>
-                    </div>
-                    <div class="col-4">
-                        <div class="progress-2">
-                        </div>
-                        <center>
-                            <h6>Shipping</h6>
-                        </center>
-                    </div>
-                    <div class="col-4">
-                        <div class="progress-3">
-                        </div>
-                        <center>
-                            <h6>Arrived</h6>
-                        </center>
-                    </div>
-                </div>
+                <center>
+                    <h6><b>Shipping</b></h6>
+                </center>
             </div>
             <div class="bawah">
                 <div class="accordion" id="accordionExample">

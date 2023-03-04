@@ -33,6 +33,11 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Status</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Shipping Date</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Final Destination</th>
+                                <th scope="col">Description</th>
                                 <th scope="col">Action</th>
                         </thead>
                         <tbody>
@@ -41,6 +46,11 @@
                                 {{-- <th scope="row">{{ $index + $kategoris->firstItem() }}</th> --}}
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $row->status }}</td>
+                                <td>{{ $row->transport->date }}</td>
+                                <td>{{ $row->shipping_date }}</td>
+                                <td>{{ $row->transport->shipping_address }}</td>
+                                <td>{{ $row->transport->finaldestination }}</td>
+                                <td>{{ $row->good->description }}</td>
                                 <td>
                                     <a href="/shipment/form-edit/{{ $row->id }}" class="text-warning">
                                         <button type="button" class="btn btn-icon rounded-circle btn-outline-warning">

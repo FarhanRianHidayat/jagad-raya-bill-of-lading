@@ -29,6 +29,10 @@
                     <input type="text" class="form-control" id="3" placeholder="Voyage Number" name="voyagenumber">
                 </div>
                 <div class="form-group">
+                    <label for="1">Address</label>
+                    <input type="text" class="form-control" id="3" placeholder="Address" name="shipping_address">
+                </div>
+                <div class="form-group">
                     <label for="1">Place of Receipt</label>
                     <input type="text" class="form-control" id="4" placeholder="Place of Receipt" name="placeofreceipt">
                 </div>
