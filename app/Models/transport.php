@@ -11,6 +11,7 @@ class transport extends Model
     use HasFactory;
     protected $table = 'transports';
     protected $guarded = [''];
+    protected $dates = ['date'];
 
     public function shipment(){
         return $this->hasMany(shipment::class);

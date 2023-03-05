@@ -6,11 +6,12 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\TrackController;
 use App\Http\Controllers\ShipperController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ConsigneeController;
-use App\Http\Controllers\TransportController;
 use App\Http\Controllers\ShipmentsController;
+use App\Http\Controllers\TransportController;
 
 
 /*
@@ -28,9 +29,8 @@ Route::get('/', function () {
     return view('layouts.usermain');
 }); 
 
-Route::get('/track', function () {
-    return view('layouts.track');
-}); 
+Route::get('/track',[TrackController::class,'index']);
+
 
 // Route::get('/dashboard', function () {
 //     return view('layouts.main');
