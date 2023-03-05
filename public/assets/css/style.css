@@ -239,7 +239,7 @@ span {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-bottom: 25vh;
+    margin-bottom: 7vh;
     gap: 70px;
 }
 
@@ -465,6 +465,39 @@ footer .social-icons a {
     margin-left: 4px;
     margin-right: 4px;
 }
+
+/* REVIEW */
+.section-title h1 {
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.review small {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--c-brand);
+}
+
+.review-head {
+    position: relative;
+}
+
+.review-head::after {
+    content: "";
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    bottom: -14px;
+    transform: rotate(45deg);
+    background: white;
+}
+
+.section-padding {
+    padding-top: 15vh;
+    padding-bottom: 30vh;
+}
+
+
 
 /* footer {
     width: 100%;
