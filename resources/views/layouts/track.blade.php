@@ -21,7 +21,7 @@
     {{-- <link rel="stylesheet" href="resources/css/style.css"> --}}
     <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/style2.css') !!}">
     {{-- <link href="/assets/css/sb-admin-2.min.css" rel="stylesheet"> --}}
-    
+
     {{-- Logo --}}
     <link rel="icon" href="assets/img/logojagad2.png">
 
@@ -55,63 +55,63 @@
                         <a class="nav-link" href="/#contact">Contact</a>
                     </li>
 
-                    
+
                 </ul>
 
                 {{-- <div>
                     <a href="/register" class="btn btn-primary {{ Request::is('login') ? 'active' : '' }}">Daftar</a>
+                <a href="/login" class=" btn btn-light {{ Request::is('login') ? 'active' : '' }}"> Login</a>
+            </div> --}}
+            <ul class="navbar-nav ml-auto">
+                @auth
+                <li class="nav-item dropdown no-arrow">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ auth()->user()->name }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="userDropdown">
+                        @can('admin')
+                        <a class="dropdown-item" href="/dashboardadmin"><i
+                                class="bi bi-layout-text-sidebar-reverse"></i> Dashboard</a>
+
+                        <hr class="dropdown-divider">
+
+                        @endcan
+                        @can('employee')
+                        <a class="dropdown-item" href="/dashboardemployee"><i
+                                class="bi bi-layout-text-sidebar-reverse"></i> Dashboard</a>
+
+                        <hr class="dropdown-divider">
+
+                        @endcan
+                        @can('user')
+                        <a class="dropdown-item" href="/track"><i
+                                class="bi bi-layout-text-sidebar-reverse"></i>Track</a>
+
+                        <hr class="dropdown-divider">
+
+                        @endcan
+
+                        <form action="/logout" method="POST">
+                            @csrf
+                            <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-in-left"></i>
+                                Logout</button>
+                        </form>
+                    </div>
+                    {{-- <img c/lass="img-profile rounded-circle" src="/assets/img/undraw_profile.svg"> --}}
+
+                </li>
+                @else
+                <li class="nav-item">
+                    <a href="/register" class="btn btn-primary {{ Request::is('login') ? 'active' : '' }}">Daftar</a>
+                </li>
+                <li class="nav-item1">
                     <a href="/login" class=" btn btn-light {{ Request::is('login') ? 'active' : '' }}"> Login</a>
-                </div> --}}
-                <ul class="navbar-nav ml-auto">
-                    @auth
-                    <li class="nav-item dropdown no-arrow">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            {{ auth()->user()->name }}
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="userDropdown">
-                            @can('admin')
-                            <a class="dropdown-item" href="/dashboardadmin"><i
-                                        class="bi bi-layout-text-sidebar-reverse"></i> Dashboard</a>
-                            
-                                <hr class="dropdown-divider">
-                            
-                            @endcan
-                            @can('employee')
-                            <a class="dropdown-item" href="/dashboardemployee"><i
-                                        class="bi bi-layout-text-sidebar-reverse"></i> Dashboard</a>
-                            
-                                <hr class="dropdown-divider">
-                            
-                            @endcan
-                            @can('user')
-                            <a class="dropdown-item" href="/track"><i
-                                        class="bi bi-layout-text-sidebar-reverse"></i>Track</a>
-                            
-                                <hr class="dropdown-divider">
-                            
-                            @endcan
+                </li>
+                @endauth
+            </ul>
 
-                            <form action="/logout" method="POST">
-                                @csrf
-                                <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-in-left"></i>
-                                    Logout</button>
-                            </form>
-                        </div>
-                                {{-- <img c/lass="img-profile rounded-circle" src="/assets/img/undraw_profile.svg"> --}}
-
-                    </li>
-                    @else
-                        <li class="nav-item">
-                            <a href="/register" class="btn btn-primary {{ Request::is('login') ? 'active' : '' }}">Daftar</a>
-                        </li>
-                        <li class="nav-item1">
-                    <a href="/login" class=" btn btn-light {{ Request::is('login') ? 'active' : '' }}"> Login</a>
-                        </li>
-                    @endauth
-                </ul>
-
-            </div>
+        </div>
         </div>
     </nav>
     {{-- content --}}
@@ -129,34 +129,36 @@
     <div class="container">
         <div class="content">
             <div class="atas">
-                <h6><b>Tracking Number</b></h6>
+                <h6><b>Tracking Number:</b>
+                </h6>
                 <div class="row">
-                    <div class="col-6">
-                        <h6><b>Expected Delivery by</b></h6>
-                        <div class="kotak-dalam d-flex">
-                            <p>Tanggal</p>
-                            <div class="line"></div>
+                    <div class="col-4">
+                        <h6><b>Shipping Date</b></h6>
+                        <div class="kotak-dalam">
+                            @foreach ($shipment as $row)
+                            <h6>{{ $row->shipping_date->format('l') }}</h6>
+                            <p>{{ $row->shipping_date->format('d F Y') }}</p>
+                            @endforeach
                         </div>
                     </div>
+                    <div class="col-2"></div>
                     <div class="col-6">
-                        <h6>Status</h6>
+                        <h6><b>Status</b></h6>
                         <div class="kotak-dalam-2">
+                            @foreach ($shipment as $row)
+                            <h6><b>{{ $row->status }}</b></h6>
+                            @endforeach
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="tengah">
-                <center>
-                    <h6><b>Shipping</b></h6>
-                </center>
             </div>
             <div class="bawah">
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed border-opacity-10" type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                aria-controls="collapseTwo">
                                 <h6>
                                     <b>Order Details</b>
                                 </h6>
@@ -165,11 +167,24 @@
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <p>Order Date:</p>
-                                <p>Ship Date:</p>
-                                <p>Shipping Address:</p>
-                                <p>Destination:</p>
-                                <p>Carrier:</p>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p>Order Date: </p>
+                                        <p>Ship Date: </p>
+                                        <p>Shipping Address: </p>
+                                        <p>Destination: </p>
+                                        <p>Carrier: </p>
+                                    </div>
+                                    <div class="col-6">
+                                        @foreach ($shipment as $row)
+                                        <p>{{ $row->transport->date->format('d F Y') }}</p>
+                                        <p>{{ $row->shipping_date->format('d F Y') }}</p>
+                                        <p>{{ $row->transport->shipping_address }}</p>
+                                        <p>{{ $row->transport->finaldestination }}</p>
+                                        <p>{{ $row->good->description }}</p>
+                                        @endforeach
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

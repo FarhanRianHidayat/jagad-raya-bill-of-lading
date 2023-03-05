@@ -51,33 +51,38 @@ body {
 }
 
 .kotak-dalam {
-    padding: 20px 0 50px 0;
-    background: #3385ff;
+    padding: 0 0 30px 0;
+    /* background: #3385ff; */
 }
 
-.kotak-dalam .line {
-    border-left: 2px solid grey;
-    height: 30px;
+.kotak-dalam h6 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #3385ff;
+}
+
+.kotak-dalam p {
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .kotak-dalam-2 {
-    padding: 20px 0 90px 0;
-    background: #3385ff;
+    padding: 0 0 30px 0;
+    /* background: #3385ff; */
 }
 
-.tengah {
-    margin-top: 80px;
-    margin-bottom: 80px;
-}
-
-.tengah h6{
+.kotak-dalam-2 h6 {
     font-size: 30px;
 }
 
-
-.row .col-4 h6 {
-    margin-top: 20px;
+.accordion-body {
+    background-color: #f1f2f6;
 }
+
+.accordion-button {
+    background-color: #f1f2f6;
+}
+
 
 
 
