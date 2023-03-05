@@ -129,7 +129,7 @@ span {
     background-color: #ffffff;
     padding: 40px;
     box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
-    transition: all 0.2s ease-in;
+    transition:  0.5s ;
 }
 
 .circle-icon {
@@ -137,7 +137,7 @@ span {
     height: 100px;
     background-color: transparent;
     border-radius: 50%;
-    transition: all 0.2s ease-in;
+    transition: 0.5s ;
 }
 
 .card-jasa h3{
@@ -160,24 +160,24 @@ span {
     background: linear-gradient(150deg, var(--pr-color),  #000080);
     padding: 40px;
     box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
-    transition: all 0.2s ease-out;
+    transition: 0.5s;
 }
 
 .card-jasa:hover .circle-icon {
     background-color: #fff;
-    transition: all 0.2s ease-out;
+    transition: all 0.5s ;
 }
 
 .card-jasa:hover h3{
     color: white;
     font-size: 24px;
-    transition: all 0.2s ease-out;
+    transition: 0.5s;
 }
 
 .card-jasa:hover p{
     color: white;
     font-size: 14px;
-    transition: all 0.2s ease-out;
+    transition: 0.5s;
 }
 
 #progres {
