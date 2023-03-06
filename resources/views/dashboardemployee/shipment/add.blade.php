@@ -19,6 +19,14 @@
                     </select>
                 </div>
                 <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">B/L Number</label>
+                    <select class="form-control" name="consignee_id" id="consignee_id">
+                        @foreach ($consignee as $row)
+                        <option value="{{ $row->id }}">{{ $row->bolnumber }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Date</label>
                     <select class="form-control" name="transport_id" id="transport_id">
                         @foreach ($transport as $row)

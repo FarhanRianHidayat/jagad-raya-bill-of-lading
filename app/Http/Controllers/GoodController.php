@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\consignee;
 use App\Models\good;
 use Illuminate\Http\Request;
 
@@ -9,6 +10,8 @@ class GoodController extends Controller
 {
     public function index(Request $request){
 
+        $data = good::all();
+        $consignee = consignee::all();
         if($request->has('search')){
             $data = good::where('markandnumbers','LIKE','%' .$request->search.'%')->paginate(5);
             // $data = consignee::where('email','LIKE','%' .$request->search.'%')->paginate(15);
@@ -18,17 +21,22 @@ class GoodController extends Controller
             $data = good::paginate(5);
         }
 
-        return view('dashboardemployee.good.table', compact('data'));
+        return view('dashboardemployee.good.table',[
+            'data' => $data,
+            'consignee' => $consignee,
+        ], compact('data'));
     }
 
     public function create(){
         return view('dashboardemployee.good.add',[
-            'data' => good::all()
+            'data' => good::all(),
+            'consignee' => consignee::all()
         ]);
     }
 
     public function store(Request $request){
         $validasi = $this->validate($request,[
+            'consignee_id' => ['required'],
             'type' => ['required'],
             'markandnumbers' => ['required'],
             'description' => ['required'],
@@ -43,20 +51,14 @@ class GoodController extends Controller
 
     public function edit($id){
         return view('dashboardemployee.good.edit',[
-            'data' => good::find($id)
+            'data' => good::find($id),
+            'consignee' => consignee::all(),
         ]);
     }
 
     public function update(Request $request, $id){
-        $validasi = $this->validate($request,[
-            'type' => ['required'],
-            'markandnumbers' => ['required'],
-            'description' => ['required'],
-            'grossweight' => ['required'],
-            'measurement' => ['required'],
-        ]);
-
-        good::where('id',$id)->update($validasi);
+        $data = good::find($id);
+        $data->update($request->all());
 
         return redirect()->route('good')->with('edit','Data berhasil di Ubah!');
     }

@@ -16,4 +16,8 @@ class transport extends Model
     public function shipment(){
         return $this->hasMany(shipment::class);
     }
+
+    public function consignee(){
+        return $this->belongsTo(consignee::class);
+    }
 }
