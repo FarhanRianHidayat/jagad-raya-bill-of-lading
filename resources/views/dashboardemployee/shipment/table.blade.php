@@ -32,6 +32,7 @@
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">#</th>
+                                <th scope="col">B/L Number</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Date</th>
                                 <th scope="col">Shipping Date</th>
@@ -45,6 +46,7 @@
                             <tr>
                                 {{-- <th scope="row">{{ $index + $kategoris->firstItem() }}</th> --}}
                                 <td>{{ $loop->iteration }}</td>
+                                <td>{{ $row->consignee->bolnumber }}</td>
                                 <td>{{ $row->status }}</td>
                                 <td>{{ $row->transport->date }}</td>
                                 <td>{{ $row->shipping_date }}</td>

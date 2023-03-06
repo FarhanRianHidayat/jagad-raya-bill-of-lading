@@ -13,6 +13,14 @@
                         @csrf
                         @method('put')
                         <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">B/L Number</label>
+                            <select class="form-select" name="consignee_id" id="consignee_id">
+                                @foreach ($consignee as $row)
+                                <option value="{{ $row->id }}">{{ $row->bolnumber }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="mb-3">
                     <label for="role" class="form-label">Type</label>
                     <select class="form-control @error('role') is-invalid @enderror"
                         aria-label="Default select example" id="type" name="type" value="{{ $data->type}}">

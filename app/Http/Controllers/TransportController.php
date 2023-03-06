@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\consignee;
 use App\Models\transport;
 use Illuminate\Http\Request;
 
@@ -9,6 +10,7 @@ class TransportController extends Controller
 {
     public function index(Request $request){
         $transport = transport::all();
+        $consignee = consignee::all();
         if($request->has('search')){
             $transport = transport::where('name','LIKE','%' .$request->search.'%')->paginate(5);
             // $data = consignee::where('email','LIKE','%' .$request->search.'%')->paginate(15);
@@ -19,17 +21,20 @@ class TransportController extends Controller
         }
         return view('dashboardemployee.transport.table',[
             'transport' => $transport,
+            'consignee' => $consignee,
         ],compact('transport') );
     }
 
     public function create(){
         return view('dashboardemployee.transport.add',[
             'transport' => transport::all(),
+            'consignee' => consignee::all(),
         ]);
     }
 
     public function store(Request $request){
         $validasi = $this->validate($request,[
+            'consignee_id' => ['required'],
             'precarriage' => ['required'],
             'vessel' => ['required'],
             'voyagenumber' => ['required'],
@@ -50,6 +55,7 @@ class TransportController extends Controller
     public function edit($id){
         return view('dashboardemployee.transport.edit',[
             'transport' => transport::find($id),
+            'consignee' => consignee::find($id),
         ]);
     }
 

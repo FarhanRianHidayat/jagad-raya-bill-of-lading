@@ -32,6 +32,7 @@
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">#</th>
+                                <th scope="col">B/L Number</th>
                                 <th scope="col">Type</th>
                                 <th scope="col">Mark & Numbers</th>
                                 <th scope="col">Description of Goods</th>
@@ -44,6 +45,7 @@
                             <tr>
                                 {{-- <th scope="row">{{ $index + $kategoris->firstItem() }}</th> --}}
                                 <td>{{ $loop->iteration }}</td>
+                                <td>{{ $row->consignee->bolnumber }}</td>
                                 <td>{{ $row->type }}</td>
                                 <td>{{ $row->markandnumbers }}</td>
                                 <td>{{ $row->description }}</td>

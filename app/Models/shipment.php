@@ -19,4 +19,7 @@ class shipment extends Model
     public function good(){
     return $this->belongsTo(good::class);
     }
+    public function consignee(){
+        return $this->belongsTo(consignee::class);
+    }
 }

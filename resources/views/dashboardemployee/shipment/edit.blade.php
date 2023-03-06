@@ -12,6 +12,7 @@
             <form action="/shipment/update/{{ $data->id }}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('put')
+                        
                         <div class="mb-3">
                     <label for="role" class="form-label">Status</label>
                     <select class="form-control @error('role') is-invalid @enderror"
@@ -20,6 +21,10 @@
                                 <option value="2">Shipping</option>
                                 <option value="3">Arrived</option>
                     </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Shipping Date</label>
+                            <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->shipping_date }}">
                         </div>
                         <button type="submit" class="btn btn-primary float-right" id="editButton">Submit</button>
                         <a href="/good" class="btn btn-light">Cancel</a>

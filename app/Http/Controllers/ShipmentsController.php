@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\consignee;
 use App\Models\good;
 use App\Models\shipment;
 use App\Models\transport;
@@ -13,6 +14,7 @@ class ShipmentsController extends Controller
         $data = shipment::all();
         $transport = transport::all();
         $good = good::all();
+        $consignee = consignee::all();
 
         if($request->has('search')){
             // $data = shipment::where('email','LIKE','%' .$request->search.'%')->paginate(15);
@@ -26,7 +28,8 @@ class ShipmentsController extends Controller
         return view('dashboardemployee.shipment.table',[
             'data' => $data,
             'transport' => $transport,
-            'good' => $good
+            'good' => $good,
+            'consignee' => $consignee,
             // $data = shipment::paginate(5);
         ],compact('data'));
             // return view('shipment.table', compact('data'));
@@ -36,13 +39,15 @@ class ShipmentsController extends Controller
         return view('dashboardemployee.shipment.add',[
             'data' => shipment::all(),
             'transport' => transport::all(),
-            'good' => good::all()
+            'good' => good::all(),
+            'consignee' => consignee::all(),
         ]);
     }
 
     public function store(Request $request){
         $validasi = $this->validate($request,[
             'status' => ['required'],
+            'consignee_id' => ['required'],
             'transport_id' => ['required'],
             'shipping_date' => ['required'],
             'shipping_address_id' => ['required'],
@@ -59,7 +64,8 @@ class ShipmentsController extends Controller
         return view('dashboardemployee.shipment.edit',[
             'data' => shipment::find($id),
             'transport' => transport::all(),
-            'good' => good::all()
+            'good' => good::all(),
+            'consignee' => consignee::all(),
         ]);
     }
 
