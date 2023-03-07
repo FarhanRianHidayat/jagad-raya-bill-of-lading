@@ -26,10 +26,11 @@ use App\Http\Controllers\TransportController;
 */
 
 Route::get('/', function () {
-    return view('layouts.usermain');
+    return view('layouts.usermain'); 
 }); 
 
 Route::get('/track',[TrackController::class,'index']);
+Route::get('/track/exportpdf',[TrackController::class, 'exportpdf'])->name('pdf-report');
 
 
 // Route::get('/dashboard', function () {
@@ -40,8 +41,8 @@ Route::get('/track',[TrackController::class,'index']);
 Route::get('/layouts/main',[MainController::class,'indexAdmin'])->middleware('admin');
 Route::get('/layouts/main',[MainController::class,'indexEmployee'])->middleware('employee');
 
-route::get('/dashboardadmin',[AdminController::class,'index'])->name('dashboard')->middleware('admin');
-route::get('/dashboardemployee',[AdminController::class,'index'])->name('dashboard')->middleware('employee');
+// route::get('/dashboardadmin',[AdminController::class,'index'])->name('dashboard')->middleware('admin');
+// route::get('/dashboardemployee',[AdminController::class,'index'])->name('dashboard')->middleware('employee');
 
 
 // Login

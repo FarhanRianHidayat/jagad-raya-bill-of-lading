@@ -12,7 +12,14 @@
             <form action="/shipment/update/{{ $data->id }}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('put')
-                        
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">B/L Number</label>
+                            <select class="form-control" name="consignee_id" id="consignee_id">
+                                @foreach ($consignee as $row)
+                                <option value="{{ $row->id }}">{{ $row->bolnumber }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                         <div class="mb-3">
                     <label for="role" class="form-label">Status</label>
                     <select class="form-control @error('role') is-invalid @enderror"
@@ -23,8 +30,32 @@
                     </select>
                         </div>
                         <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Date</label>
+                            <select class="form-control" name="transport_id" id="transport_id">
+                                @foreach ($transport as $row)
+                                <option value="{{ $row->id }}">{{ $row->date }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Shipping Date</label>
                             <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->shipping_date }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Address</label>
+                            <select class="form-control" name="shipping_address_id" id="shippingaddress_id">
+                                @foreach ($transport as $row)
+                                <option value="{{ $row->id }}">{{ $row->shipping_address }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Final Destination</label>
+                            <select class="form-control" name="finaldestination_id" id="finaldestination_id">
+                                @foreach ($transport as $row)
+                                <option value="{{ $row->id }}">{{ $row->finaldestination }}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <button type="submit" class="btn btn-primary float-right" id="editButton">Submit</button>
                         <a href="/good" class="btn btn-light">Cancel</a>

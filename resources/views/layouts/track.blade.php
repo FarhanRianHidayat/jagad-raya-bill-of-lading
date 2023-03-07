@@ -129,7 +129,9 @@
     <div class="container">
         <div class="content">
             <div class="atas">
-                <h6><b>Tracking Number:</b>
+                @foreach ($shipment as $row)
+                <h6><b>Tracking Number: {{ $row->consignee->bolnumber }}</b>
+                @endforeach
                 </h6>
                 <div class="row">
                     <div class="col-4">
@@ -190,6 +192,9 @@
                     </div>
                 </div>
             </div>
+            <div class="bawah-button">
+                <a href="{{route('pdf-report')}}" type="button" class="btn btn-primary">Export PDF</a>
+            </div>
         </div>
     </div>
 
@@ -225,8 +230,10 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
+                    <form action="/track" method="GET">
                     <input type="search" id="inputPassword6" name="search" class="form-control"
                         aria-describedby="passwordHelpInline" placeholder="Search...">
+                    </form>
                 </div>
             </div>
         </div>

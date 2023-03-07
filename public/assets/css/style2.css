@@ -42,9 +42,9 @@ body {
     margin-top: 20px;
 }
 
-.content .atas {
+/* .content .atas {
     margin-bottom: 50px;
-}
+} */
 
 .atas h6 {
     font-size: 18px;
@@ -92,6 +92,11 @@ body {
 
 .bawah p {
     font-size: 14;
+}
+
+.bawah-button{
+    margin-top: 20px;
+    margin-left: 91%;
 }
 
 /* footer */
