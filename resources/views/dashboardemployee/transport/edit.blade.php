@@ -14,7 +14,7 @@
                         @method('put')
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Pemasukan</label>
-                            <select class="form-select" name="consignee_id" id="consignee_id">
+                            <select class="form-control" name="consignee_id" id="consignee_id">
                                 @foreach ($consignee as $row)
                                 <option value="{{ $row->id }}">{{ $row->bolnumber }}</option>
                                 @endforeach

@@ -55,7 +55,7 @@ class TransportController extends Controller
     public function edit($id){
         return view('dashboardemployee.transport.edit',[
             'transport' => transport::find($id),
-            'consignee' => consignee::find($id),
+            'consignee' => consignee::all(),
         ]);
     }
 

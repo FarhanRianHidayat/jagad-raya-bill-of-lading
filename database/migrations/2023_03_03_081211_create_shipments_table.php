@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreignId('consignee_id');
             $table->foreignId('transport_id');
             $table->date('shipping_date');
+            $table->string('job_number');
             $table->foreignId('shipping_address_id');
             $table->foreignId('finaldestination_id');
             $table->foreignId('good_id');
