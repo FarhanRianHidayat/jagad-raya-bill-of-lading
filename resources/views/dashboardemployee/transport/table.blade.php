@@ -32,7 +32,7 @@
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">B/L Number</th>
+                                {{-- <th scope="col">B/L Number</th> --}}
                                 <th scope="col">Pre-carriage by</th>
                                 <th scope="col">Vessel</th>
                                 <th scope="col">Voyage Number</th>
@@ -50,7 +50,7 @@
                             <tr>
                                 {{-- <th scope="row">{{ $index + $kategoris->firstItem() }}</th> --}}
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $row->consignee->bolnumber }}</td>
+                                {{-- <td>{{ $row->consignee->bolnumber }}</td> --}}
                                 <td>{{ $row->precarriage }}</td>
                                 <td>{{ $row->vessel }}</td>
                                 <td>{{ $row->voyagenumber }}</td>

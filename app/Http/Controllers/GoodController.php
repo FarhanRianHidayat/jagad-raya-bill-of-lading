@@ -11,7 +11,7 @@ class GoodController extends Controller
     public function index(Request $request){
 
         $data = good::all();
-        $consignee = consignee::all();
+        // $consignee = consignee::all();
         if($request->has('search')){
             $data = good::where('markandnumbers','LIKE','%' .$request->search.'%')->paginate(5);
             // $data = consignee::where('email','LIKE','%' .$request->search.'%')->paginate(15);
@@ -23,20 +23,20 @@ class GoodController extends Controller
 
         return view('dashboardemployee.good.table',[
             'data' => $data,
-            'consignee' => $consignee,
+            // 'consignee' => $consignee,
         ], compact('data'));
     }
 
     public function create(){
         return view('dashboardemployee.good.add',[
             'data' => good::all(),
-            'consignee' => consignee::all()
+            // 'consignee' => consignee::all()
         ]);
     }
 
     public function store(Request $request){
         $validasi = $this->validate($request,[
-            'consignee_id' => ['required'],
+            // 'consignee_id' => ['required'],
             'type' => ['required'],
             'markandnumbers' => ['required'],
             'description' => ['required'],
@@ -52,7 +52,7 @@ class GoodController extends Controller
     public function edit($id){
         return view('dashboardemployee.good.edit',[
             'data' => good::find($id),
-            'consignee' => consignee::all(),
+            // 'consignee' => consignee::all(),
         ]);
     }
 

@@ -36,6 +36,7 @@
                                 <th scope="col">Status</th>
                                 <th scope="col">Date</th>
                                 <th scope="col">Shipping Date</th>
+                                {{-- <th scope="col">Company Name</th> --}}
                                 <th scope="col">Address</th>
                                 <th scope="col">Final Destination</th>
                                 <th scope="col">Description</th>
@@ -46,10 +47,11 @@
                             <tr>
                                 {{-- <th scope="row">{{ $index + $kategoris->firstItem() }}</th> --}}
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $row->consignee->bolnumber }}</td>
+                                <td>{{ $row->bolnumber }}</td>
                                 <td>{{ $row->status }}</td>
                                 <td>{{ $row->transport->date }}</td>
                                 <td>{{ $row->shipping_date }}</td>
+                                {{-- <td>{{ $row->consignee->name }}</td> --}}
                                 <td>{{ $row->transport->shipping_address }}</td>
                                 <td>{{ $row->transport->finaldestination }}</td>
                                 <td>{{ $row->good->description }}</td>
