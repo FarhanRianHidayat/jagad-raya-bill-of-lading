@@ -12,14 +12,14 @@
             <form action="/good/update/{{ $data->id }}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('put')
-                        <div class="mb-3">
+                        {{-- <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">B/L Number</label>
                             <select class="form-control" name="consignee_id" value="{{ $data->type}}">
                                 @foreach ($consignee as $row)
                                 <option value="{{ $row->id }}">{{ $row->bolnumber }}</option>
                                 @endforeach
                             </select>
-                        </div>
+                        </div> --}}
                         <div class="mb-3">
                     <label for="role" class="form-label">Type</label>
                     <select class="form-control @error('role') is-invalid @enderror"

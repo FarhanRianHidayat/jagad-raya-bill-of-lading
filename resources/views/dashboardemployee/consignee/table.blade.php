@@ -32,7 +32,7 @@
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">B/L Number</th>
+                                {{-- <th scope="col">B/L Number</th> --}}
                                 <th scope="col">Name</th>
                                 <th scope="col">Address</th>
                                 <th scope="col">Telephone</th>
@@ -44,7 +44,7 @@
                             <tr>
                                 {{-- <th scope="row">{{ $index + $kategoris->firstItem() }}</th> --}}
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $row->bolnumber }}</td>
+                                {{-- <td>{{ $row->bolnumber }}</td> --}}
                                 <td>{{ $row->name }}</td>
                                 <td>{{ $row->address }}</td>
                                 <td>{{ $row->telephone }}</td>

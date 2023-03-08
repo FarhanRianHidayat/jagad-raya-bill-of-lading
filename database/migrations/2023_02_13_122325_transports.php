@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('transports', function (Blueprint $table) {
             $table->id();
             $table->enum('precarriage',['Air','Sea','Road','Rail']);
-            $table->foreignId('consignee_id');
+            // $table->foreignId('consignee_id');
             $table->string('vessel');
             $table->string('voyagenumber');
             $table->string('shipping_address');

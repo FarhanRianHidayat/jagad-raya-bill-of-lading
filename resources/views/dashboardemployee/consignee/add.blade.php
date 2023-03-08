@@ -11,10 +11,10 @@
         <div class="card-body">
             <form class="forms-sample" action="/consignee/insert" method="POST">
                 @csrf
-                <div class="form-group">
+                {{-- <div class="form-group">
                     <label for="1">B/L Number</label>
                     <input type="text" class="form-control" id="1" placeholder="B/L Number" name="bolnumber">
-                </div>
+                </div> --}}
                 <div class="form-group">
                     <label for="1">Nama</label>
                     <input type="text" class="form-control" id="2" placeholder="Name" name="name">

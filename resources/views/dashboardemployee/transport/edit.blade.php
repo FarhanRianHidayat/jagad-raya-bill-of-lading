@@ -12,14 +12,14 @@
             <form action="/transport/update/{{ $transport->id }}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('put')
-                        <div class="mb-3">
+                        {{-- <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Pemasukan</label>
                             <select class="form-control" name="consignee_id" id="consignee_id">
                                 @foreach ($consignee as $row)
                                 <option value="{{ $row->id }}">{{ $row->bolnumber }}</option>
                                 @endforeach
                             </select>
-                        </div>
+                        </div> --}}
                         <div class="mb-3">
                     <label for="role" class="form-label">Pre-carriage by</label>
                     <select class="form-control @error('role') is-invalid @enderror"

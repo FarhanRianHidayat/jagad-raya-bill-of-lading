@@ -18,14 +18,14 @@
                                 <option value="2">Import</option>
                     </select>
                 </div>
-                <div class="form-group">
+                {{-- <div class="form-group">
                     <label for="exampleInputEmail1" class="form-label">B/L Number</label>
                     <select class="form-control" name="consignee_id" id="consignee_id">
                         @foreach ($consignee as $row)
                         <option value="{{ $row->id }}">{{ $row->bolnumber }}</option>
                         @endforeach
                     </select>
-                </div>
+                </div> --}}
                 <div class="form-group">
                     <label for="1">Mark & Numbers</label>
                     <input type="text" class="form-control" id="2" placeholder="Mark & Numbers" name="markandnumbers">

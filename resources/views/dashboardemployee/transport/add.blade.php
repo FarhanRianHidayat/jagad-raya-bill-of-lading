@@ -11,14 +11,14 @@
         <div class="card-body">
             <form class="forms-sample" action="/transport/insert" method="POST">
                 @csrf
-                <div class="form-group">
+                {{-- <div class="form-group">
                     <label for="exampleInputEmail1" class="form-label">B/L Number</label>
                     <select class="form-control" name="consignee_id" id="consignee_id">
                         @foreach ($consignee as $row)
                         <option value="{{ $row->id }}">{{ $row->bolnumber }}</option>
                         @endforeach
                     </select>
-                </div>
+                </div> --}}
                 <div class="form-group">
                     <label for="2">Pre-carriage by</label>
                     <select class="form-control" id="1" name="precarriage">

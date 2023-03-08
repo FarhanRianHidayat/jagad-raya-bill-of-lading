@@ -15,7 +15,7 @@ class good extends Model
         return $this->hasMany(shipment::class);
     }
 
-    public function consignee(){
-        return $this->belongsTo(consignee::class);
-    }
+    // public function consignee(){
+    //     return $this->belongsTo(consignee::class);
+    // }
 }

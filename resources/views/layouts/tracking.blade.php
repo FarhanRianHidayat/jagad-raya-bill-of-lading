@@ -19,7 +19,7 @@
     <link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     {{-- <link rel="stylesheet" href="resources/css/style.css"> --}}
-    <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/style2.css') !!}">
+    <link rel="stylesheet" type="text/css" href="{!! asset('assets/css/tracking.css') !!}">
     {{-- <link href="/assets/css/sb-admin-2.min.css" rel="stylesheet"> --}}
 
     {{-- Logo --}}
@@ -117,17 +117,6 @@
     {{-- content --}}
 
     <div class="container">
-        <div class="search">
-            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cariModal">
-                <p><b>Search Track</b>
-                    <i class="fa fa-search"></i>
-                </p>
-            </a>
-        </div>
-    </div>
-    <div class="content"></div>
-
-    {{-- <div class="container">
         <div class="content">
             <div class="atas">
                 @foreach ($shipment as $row)
@@ -193,11 +182,11 @@
                     </div>
                 </div>
             </div>
-            <div class="bawah-button">
+            {{-- <div class="bawah-button">
                 <a href="{{route('pdf-report')}}" type="button" class="btn btn-primary">Export PDF</a>
-            </div>
+            </div> --}}
         </div>
-    </div> --}}
+    </div>
 
 
     <footer class="d-flex align-items-center">

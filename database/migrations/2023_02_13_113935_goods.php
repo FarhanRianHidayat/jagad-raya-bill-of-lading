@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('goods', function (Blueprint $table) {
             $table->id();
             $table->enum('type',['export','import']);
-            $table->foreignId('consignee_id');
+            // $table->foreignId('consignee_id');
             $table->string('markandnumbers');
             $table->string('description');
             $table->string('grossweight');

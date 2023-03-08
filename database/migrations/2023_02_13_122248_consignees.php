@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('consignees', function (Blueprint $table) {
             $table->id();
-            $table->string('bolnumber');
+            // $table->string('bolnumber');
             $table->string('name');
             $table->string('address');
             $table->string('telephone');
