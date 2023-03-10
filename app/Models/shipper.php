@@ -10,4 +10,8 @@ class shipper extends Model
     use HasFactory;
     protected $table = 'shippers';
     protected $guarded = [''];
+
+    public function shipment(){
+        return $this->hasMany(shipment::class);
+    }
 }

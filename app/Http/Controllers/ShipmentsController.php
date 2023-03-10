@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\consignee;
+use App\Models\shipper;
 use App\Models\good;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\shipment;
@@ -14,7 +15,8 @@ class ShipmentsController extends Controller
         $data = shipment::all();
         $transport = transport::all();
         $good = good::all();
-        // $consignee = consignee::all();
+        $consignee = consignee::all();
+        $shipper = shipper::all();
 
         if($request->has('search')){
             // $data = shipment::where('email','LIKE','%' .$request->search.'%')->paginate(15);
@@ -29,7 +31,8 @@ class ShipmentsController extends Controller
             'data' => $data,
             'transport' => $transport,
             'good' => $good,
-            // 'consignee' => $consignee,
+            'consignee' => $consignee,
+            'shipper' => $shipper,
             // $data = shipment::paginate(5);
         ],compact('data'));
             // return view('shipment.table', compact('data'));
@@ -43,20 +46,21 @@ class ShipmentsController extends Controller
     // 	return $shipment->download('layouts.tpdf2');
     // } 
 
-    //      public function exportpdf()
-    // {
-    // 	$shipment = shipment::all();
+         public function exportpdf()
+    {
+    	$shipment = shipment::all();
  
-    // 	$pdf = PDF::loadview('exportpd',['shipment'=>$shipment]);
-    // 	return $pdf->download('layouts.tpdf2');
-    // }
+    	$pdf = PDF::loadview('layouts.tpdf2',['shipment'=>$shipment]);
+    	return $pdf->download('bl.pdf');
+    }
 
     public function create(){
         return view('dashboardemployee.shipment.add',[
             'data' => shipment::all(),
             'transport' => transport::all(),
             'good' => good::all(),
-            // 'consignee' => consignee::all(),
+            'consignee' => consignee::all(),
+            'shipper' => shipper::all(),
         ]);
     }
 
@@ -65,6 +69,8 @@ class ShipmentsController extends Controller
             'status' => ['required'],
             'bolnumber' => ['required'],
             'transport_id' => ['required'],
+            'consignee_id' => ['required'],
+            'shipper_id' => ['required'],
             'shipping_date' => ['required'],
             'shipping_address_id' => ['required'],
             'finaldestination_id' => ['required'],
@@ -80,7 +86,8 @@ class ShipmentsController extends Controller
             'data' => shipment::find($id),
             'transport' => transport::all(),
             'good' => good::all(),
-            // 'consignee' => consignee::all(),
+            'consignee' => consignee::all(),
+            'shipper' => shipper::all(),
         ]);
     }
 

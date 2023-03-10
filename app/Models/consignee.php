@@ -11,9 +11,9 @@ class consignee extends Model
     protected $table = 'consignees';
     protected $guarded = [''];
 
-    // public function shipment(){
-    //     return $this->hasMany(shipment::class);
-    // }
+    public function shipment(){
+        return $this->hasMany(shipment::class);
+    }
     // public function good(){
     //     return $this->hasMany(good::class);
     // }

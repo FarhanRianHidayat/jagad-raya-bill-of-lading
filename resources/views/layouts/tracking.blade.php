@@ -182,37 +182,33 @@
                     </div>
                 </div>
             </div>
-            {{-- <div class="bawah-button">
+            <div class="bawah-button">
                 <a href="{{route('pdf-report')}}" type="button" class="btn btn-primary">Export PDF</a>
-            </div> --}}
+            </div>
         </div>
     </div>
 
 
-    <footer class="d-flex align-items-center">
-        <div class="container-fluid">
+    <footer>
+        <div class="footer-top text-center">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-7 d-flex align-items-center">
-                        <img src="assets/img/logo.jpeg" alt="">
-                        <a href="#" class="ms-3">Jagad Raya</a>
-                    </div>
-                    <div class="col-md-5 d-flex  justify-content-evenly">
-                        <a href="#hero">Home</a>
-                        <a href="#jasa">Information</a>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
-                    </div>
-                </div>
-                <div class="row copyright start-50">
-                    <center>
-                        <div class="col-12">
-                            <p>© 2023 Jagad Raya Logistik All Rights Reserved
-                            </p>
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <h4 class="navbar-brand">Jagad Raya<span class="dot">.</span></h4>
+                        <p>Jagad Raya Logistik dapat memberikan solusi logistik yang efisien dan terintegrasi untuk
+                            memenuhi kebutuhan pelanggan.</p>
+                        <div class="col-auto social-icons">
+                            <a href="#"><i class='bx bxl-facebook'></i></a>
+                            <a href="#"><i class='bx bxl-twitter'></i></a>
+                            <a href="#"><i class='bx bxl-instagram'></i></a>
+                            <a href="#"><i class='bx bxl-pinterest'></i></a>
                         </div>
-                    </center>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p class="mb-0">Copyright@2023. All rights Reserved</p>
         </div>
     </footer>
 

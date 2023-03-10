@@ -12,26 +12,25 @@
 		}
 	</style>
 	<center>
-		<h5>Membuat Laporan PDF Dengan DOMPDF Laravel</h4>
-		<h6><a target="_blank" href="https://www.malasngoding.com/membuat-laporan-…n-dompdf-laravel/">www.malasngoding.com</a></h5>
+		<h5>Bill of Lading Shipments</h4>
 	</center>
  
 	<table class='table table-bordered'>
 		<thead>
 			<tr>
-				<th scope="col">#</th>
-                                <th scope="col">B/L Number</th>
-                                <th scope="col">Status</th>
-                                <th scope="col">Date</th>
-                                <th scope="col">Shipping Date</th>
-                                <th scope="col">Company Name</th>
-                                <th scope="col">Address</th>
-                                <th scope="col">Final Destination</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Action</th>
+                <th scope="col">#</th>
+                <th scope="col">B/L Number</th>
+                <th scope="col">Status</th>
+                <th scope="col">Date</th>
+                <th scope="col">Shipping Date</th>
+                <th scope="col">Company Name</th>
+                <th scope="col">Shipper Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Final Destination</th>
+                <th scope="col">Description</th>
                         </thead>
                         <tbody>
-                            @foreach ($data as $row)
+                            @foreach ($shipment as $row)
                             <tr>
                                 {{-- <th scope="row">{{ $index + $kategoris->firstItem() }}</th> --}}
                                 <td>{{ $loop->iteration }}</td>
@@ -39,6 +38,7 @@
                                 <td>{{ $row->status }}</td>
                                 <td>{{ $row->transport->date }}</td>
                                 <td>{{ $row->shipping_date }}</td>
+                                <td>{{ $row->shipper->name }}</td>
                                 <td>{{ $row->consignee->name }}</td>
                                 <td>{{ $row->transport->shipping_address }}</td>
                                 <td>{{ $row->transport->finaldestination }}</td>

@@ -36,7 +36,8 @@
                                 <th scope="col">Status</th>
                                 <th scope="col">Date</th>
                                 <th scope="col">Shipping Date</th>
-                                {{-- <th scope="col">Company Name</th> --}}
+                                <th scope="col">Company Name</th>
+                                <th scope="col">Shipper Name</th>
                                 <th scope="col">Address</th>
                                 <th scope="col">Final Destination</th>
                                 <th scope="col">Description</th>
@@ -51,7 +52,8 @@
                                 <td>{{ $row->status }}</td>
                                 <td>{{ $row->transport->date }}</td>
                                 <td>{{ $row->shipping_date }}</td>
-                                {{-- <td>{{ $row->consignee->name }}</td> --}}
+                                <td>{{ $row->shipper->name }}</td>
+                                <td>{{ $row->consignee->name }}</td>
                                 <td>{{ $row->transport->shipping_address }}</td>
                                 <td>{{ $row->transport->finaldestination }}</td>
                                 <td>{{ $row->good->description }}</td>
@@ -77,7 +79,7 @@
                         </tbody>  
                     </table>
                     <br>
-                    {{-- {{ $data->links() }} --}}
+                    {{ $data->links() }}
                 </div>
             </div>
         </div>

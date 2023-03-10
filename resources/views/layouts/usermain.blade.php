@@ -165,7 +165,7 @@
                         efisien
                         dan terintegrasi untuk memenuhi kebutuhan pelanggan.</p>
 
-                    <button class="button-lg-primary" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Mulai</button>
+                    {{-- <button class="button-lg-primary" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Mulai</button> --}}
                     {{-- <a href="#"><img src="assets/img/arrow.png" alt=""></a> --}}
                 </div>
             </div>
@@ -302,7 +302,7 @@
                     <p class="mb-0 text-center">Tahun Beroperasi</p>
                 </div>
                 <div class="col-lg-2 col-sm-6" data-aos="fade-down" data-aos-delay="250" data-aos-duration="700">
-                    <h1 class="display-4 text-center">10k+</h1>
+                    <h1 class="display-4 text-center">20+</h1>
                     <p class="mb-0 text-center">Klien Ditangani</p>
                 </div>
                 <div class="col-lg-2 col-sm-6" data-aos="fade-down" data-aos-delay="350" data-aos-duration="700">
@@ -310,7 +310,7 @@
                     <p class="mb-0 text-center">Jenis Jasa</p>
                 </div>
                 <div class="col-lg-2 col-sm-6" data-aos="fade-down" data-aos-delay="450" data-aos-duration="700">
-                    <h1 class="display-4 text-center">100+</h1>
+                    <h1 class="display-4 text-center">15+</h1>
                     <p class="mb-0 text-center">Jaringan Mitra & Agen</p>
                 </div>
             </div>
@@ -513,34 +513,9 @@
             </div>
         </div>
         <div class="footer-bottom text-center">
-            <p class="mb-0">Copyright@2023. All rights Reserved</p>
+            <p class="mb-0">Copyright@2023. Jagad Raya All rights Reserved</p>
         </div>
     </footer>
-
-    {{-- <footer class="d-flex align-items-center position-relative">
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7 d-flex align-items-center">
-                        <img src="assets/img/logo.jpeg" alt="">
-                        <a href="#" class="ms-3">Jagad Raya</a>
-                    </div>
-                    <div class="col-md-5 d-flex  justify-content-evenly">
-                        <a href="#hero">Home</a>
-                        <a href="#jasa">Information</a>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
-                    </div>
-                </div>
-                <div class="row position-absolute copyright start-50 translate-middle">
-                    <div class="col-12">
-                        <p>© 2023 Jagad Raya Logistik All Rights Reserved
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer> --}}
 
     <!-- Optional JavaScript; choose one of the two! -->
 

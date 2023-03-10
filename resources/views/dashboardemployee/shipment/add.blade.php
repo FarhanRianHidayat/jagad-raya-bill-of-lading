@@ -35,6 +35,22 @@
                     <input type="date" class="form-control" id="8" name="shipping_date">
                 </div>
                 <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Company Name</label>
+                    <select class="form-control" name="consignee_id" id="3">
+                        @foreach ($consignee as $row)
+                        <option value="{{ $row->id }}">{{ $row->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Shipper Name</label>
+                    <select class="form-control" name="shipper_id" id="3">
+                        @foreach ($shipper as $row)
+                        <option value="{{ $row->id }}">{{ $row->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Shipping Address</label>
                     <select class="form-control" name="shipping_address_id" id="3">
                         @foreach ($transport as $row)

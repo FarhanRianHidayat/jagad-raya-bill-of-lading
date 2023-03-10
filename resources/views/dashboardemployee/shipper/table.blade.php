@@ -69,7 +69,7 @@
                         </tbody>  
                     </table>
                     <br>
-                    {{-- {{ $data->links() }} --}}
+                    {{ $data->links() }}
                 </div>
             </div>
         </div>

@@ -65,8 +65,8 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            @if(auth()->user()->role == 'admin')
+            {{-- <!-- Nav Item - Dashboard -->
+            {{-- @if(auth()->user()->role == 'admin')
             <li class="nav-item active">
                 <a class="nav-link" href="/dashboardadmin">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -79,7 +79,7 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
-            @endif
+            @endif  --}}
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -93,9 +93,14 @@
             
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
+                @if (auth()->user()->role == 'admin')                    
                 <a class="nav-link" href="/user">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>User</span></a>
+                @endif
+                <div class="sidebar-heading">
+                    Manajemen Data Pengiriman
+                </div>
                 <a class="nav-link" href="/shipper">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Shipper</span></a>

@@ -31,7 +31,7 @@ Route::get('/', function () {
 
 Route::get('/track',[TrackController::class,'index']);
 Route::get('/tracking',[TrackController::class,'search']);
-// Route::get('/exportpdf',[ShipmentsController::class, 'exportpdf'])->name('pdf-report');
+Route::get('/exportpdf',[ShipmentsController::class, 'exportpdf'])->name('pdf-report');
 
 
 // Route::get('/dashboard', function () {
