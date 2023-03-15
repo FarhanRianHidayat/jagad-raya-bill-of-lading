@@ -95,9 +95,3 @@ Route::post('/shipment/insert',[ShipmentsController::class, 'store'])->name('ins
 Route::get('/shipment/form-edit/{id}',[ShipmentsController::class, 'edit'])->name('form-edit-shipment');
 Route::put('/shipment/update/{id}',[ShipmentsController::class, 'update'])->name('update-shipment');
 Route::get('/shipment/delete/{id}',[ShipmentsController::class, 'destroy'])->name('delete-shipment');
-// Login
-// route::get('/login',[LoginController::class,'index'])->name('login')->middleware('guest');
-// route::post('/login',[LoginController::class,'authenticate']);
-// route::post('/logout',[LoginController::class,'logout']);
-// route::get('/registrasi',[RegisterController::class,'index'])->name('registrasi');
-// route::post('/registrasi',[RegisterController::class,'store']);
