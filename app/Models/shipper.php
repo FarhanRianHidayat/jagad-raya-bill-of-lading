@@ -14,4 +14,8 @@ class shipper extends Model
     public function shipment(){
         return $this->hasMany(shipment::class);
     }
+
+    public function job(){
+        return $this->hasMany(job::class);
+    }
 }

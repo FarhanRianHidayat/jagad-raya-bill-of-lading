@@ -12,6 +12,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ConsigneeController;
 use App\Http\Controllers\ShipmentsController;
 use App\Http\Controllers\TransportController;
+use App\Http\Controllers\JobController;
 
 
 /*
@@ -95,3 +96,10 @@ Route::post('/shipment/insert',[ShipmentsController::class, 'store'])->name('ins
 Route::get('/shipment/form-edit/{id}',[ShipmentsController::class, 'edit'])->name('form-edit-shipment');
 Route::put('/shipment/update/{id}',[ShipmentsController::class, 'update'])->name('update-shipment');
 Route::get('/shipment/delete/{id}',[ShipmentsController::class, 'destroy'])->name('delete-shipment');
+// Jobs
+Route::get('/job', [JobController::class, 'index'])->name('job');
+Route::get('/job/add',[JobController::class, 'create'])->name('add-job');
+Route::post('/job/insert',[JobController::class, 'store'])->name('insert-job');
+Route::get('/job/form-edit/{id}',[JobController::class, 'edit'])->name('form-edit-job');
+Route::put('/job/update/{id}',[JobController::class, 'update'])->name('update-job');
+Route::get('/job/delete/{id}',[JobController::class, 'destroy'])->name('delete-job');

@@ -42,7 +42,7 @@
                         <img class="" src="/assets/img/logo.jpeg" style="width: 30px;">
                     </div>
                     {{-- <img class="img-profile rounded-circle" src="/assets/img/logojagad.png"> --}}
-                    
+
                 </div>
                 <div class="sidebar-brand-text mx-3">Jagad <sup>Raya</sup></div>
             </a>
@@ -90,10 +90,10 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            
+
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                @if (auth()->user()->role == 'admin')                    
+                @if (auth()->user()->role == 'admin')
                 <a class="nav-link" href="/user">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>User</span></a>
@@ -113,17 +113,20 @@
                 <a class="nav-link" href="/good">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Goods</span></a>
+                <a class="nav-link" href="/job">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Job</span></a>
                 <a class="nav-link" href="/shipment">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Shipment</span></a>
             </li>
 
-            
 
-           
+
+
 
             <!-- Nav Item - Pages Collapse Menu -->
-            
+
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -150,11 +153,11 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    
+
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        
+
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
@@ -186,7 +189,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
                                     @auth
-                                        {{ auth()->user()->name }}
+                                    {{ auth()->user()->name }}
 
                                     @endauth
                                 </span>
@@ -284,7 +287,7 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-        {{-- profile Modal --}}
+    {{-- profile Modal --}}
     <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -299,19 +302,19 @@
                     <div>
                         Name:
                         @auth
-                            {{ auth()->user()->name }}
+                        {{ auth()->user()->name }}
                         @endauth
                     </div>
                     <div>
                         Role:
                         @auth
-                            {{ auth()->user()->role }}
+                        {{ auth()->user()->role }}
                         @endauth
                     </div>
                     <div>
                         @auth
                         Email:
-                            {{ auth()->user()->email }}
+                        {{ auth()->user()->email }}
                         @endauth
                     </div>
                 </div>
@@ -361,8 +364,10 @@
     <script src="/assets/js/demo/chart-pie-demo.js"></script>
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.js"
+        integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
     <script src="jquery-3.6.0.js"></script>
     <script src="simple.money.format.js"></script>
     <script src="style.js"></script>
