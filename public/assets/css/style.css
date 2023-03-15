@@ -566,3 +566,19 @@ footer a{
     border-radius: .20rem
 }
 
+.navbar-nav .translate{
+    /* width: 15px; */
+    margin-left: 8px;
+    margin-top: 8px;
+}
+
+.navbar-nav .translate .fas{
+    font-size: 30px;
+    color: #0d6efd;
+    /* border: 2px solid black; */
+}
+
+
+.container .kapal{
+    margin-top: 30vh;
+}
