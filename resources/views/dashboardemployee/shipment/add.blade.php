@@ -19,6 +19,14 @@
                     </select>
                 </div>
                 <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Job Number</label>
+                    <select class="form-control" name="job_id" id="2">
+                        @foreach ($job as $row)
+                        <option value="{{ $row->id }}">{{ $row->job_number }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="mb-3">
                     <label for="1">B/L Number</label>
                     <input type="text" class="form-control" id="2" placeholder="B/L Number" name="bolnumber">
                 </div>

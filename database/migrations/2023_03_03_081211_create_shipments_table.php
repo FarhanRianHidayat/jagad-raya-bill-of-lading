@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('shipments', function (Blueprint $table) {
             $table->id();
             $table->enum('status',['Accepted','Shipping','Arrived']);
+            $table->foreignId('job_id');
             $table->string('bolnumber');
             $table->foreignId('transport_id');
             $table->date('shipping_date');

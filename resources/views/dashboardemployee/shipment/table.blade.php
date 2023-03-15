@@ -32,6 +32,7 @@
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">#</th>
+                                <th scope="col">Job Number</th>
                                 <th scope="col">B/L Number</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Date</th>
@@ -48,6 +49,7 @@
                             <tr>
                                 {{-- <th scope="row">{{ $index + $kategoris->firstItem() }}</th> --}}
                                 <td>{{ $loop->iteration }}</td>
+                                <td>{{ $row->job->job_number }}</td>
                                 <td>{{ $row->bolnumber }}</td>
                                 <td>{{ $row->status }}</td>
                                 <td>{{ $row->transport->date }}</td>

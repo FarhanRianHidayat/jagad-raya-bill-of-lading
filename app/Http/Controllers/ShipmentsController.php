@@ -7,6 +7,7 @@ use App\Models\good;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\shipment;
 use App\Models\transport;
+use App\Models\job;
 use Illuminate\Http\Request;
 
 class ShipmentsController extends Controller
@@ -17,6 +18,7 @@ class ShipmentsController extends Controller
         $good = good::all();
         $consignee = consignee::all();
         $shipper = shipper::all();
+        $job = job::all();
 
         if($request->has('search')){
             // $data = shipment::where('email','LIKE','%' .$request->search.'%')->paginate(15);
@@ -33,6 +35,7 @@ class ShipmentsController extends Controller
             'good' => $good,
             'consignee' => $consignee,
             'shipper' => $shipper,
+            'job' => $job,
             // $data = shipment::paginate(5);
         ],compact('data'));
             // return view('shipment.table', compact('data'));
@@ -61,12 +64,14 @@ class ShipmentsController extends Controller
             'good' => good::all(),
             'consignee' => consignee::all(),
             'shipper' => shipper::all(),
+            'job' => job::all(),
         ]);
     }
 
     public function store(Request $request){
         $validasi = $this->validate($request,[
             'status' => ['required'],
+            'job_id' => ['required'],
             'bolnumber' => ['required'],
             'transport_id' => ['required'],
             'consignee_id' => ['required'],
@@ -88,6 +93,7 @@ class ShipmentsController extends Controller
             'good' => good::all(),
             'consignee' => consignee::all(),
             'shipper' => shipper::all(),
+            'job' => job::all(),
         ]);
     }
 

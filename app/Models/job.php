@@ -15,4 +15,8 @@ class job extends Model
     public function shipper(){
         return $this->belongsTo(shipper::class);
         }
+
+    protected function shipment(){
+        return $this->hasMany(shipment::class);
+        }
 }

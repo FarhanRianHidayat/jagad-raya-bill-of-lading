@@ -25,4 +25,7 @@ class shipment extends Model
     public function shipper(){
         return $this->belongsTo(shipper::class);
     }
+    public function job(){
+        return $this->belongsTo(job::class);
+    }
 }
