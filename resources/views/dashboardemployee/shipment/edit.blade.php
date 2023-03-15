@@ -16,7 +16,7 @@
                     <label for="exampleInputEmail1" class="form-label">Job Number</label>
                     <select class="form-control" name="job_id" id="3">
                         @foreach ($job as $row)
-                        <option value="{{ $row->id }}">{{ $row->job_number }}</option>
+                        <option value="{{ $row->id }}">{{ $row->job_number }}</option> 
                         @endforeach
                     </select>
                 </div>
