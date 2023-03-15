@@ -35,7 +35,6 @@
 </head>
 
 <body>
-
     {{-- Navbar --}}
     <nav class="navbar navbar-expand-lg navbar-light position-fixed bg-light w-100">
         <div class="container">
@@ -70,9 +69,9 @@
                         @endcan
                     </li>
                     @endauth
-
-                    <li class="nav-item mx-2"><div id="google_element"><i class="far fa-language"></i></div></li>
-
+                    <a href="" type="button" class="translate" data-bs-toggle="modal" data-bs-target="#translateModal">
+                        <i class="fas fa-language"></i>
+                    </a>
 
                 </ul>
 
@@ -137,16 +136,12 @@
         @endif
         @else
         <li class="nav-item1">
-            <a href="/register" class="btn btn-primary {{ Request::is('login') ? 'active' : '' }}">Daftar</a>
+            <a href="/register" class="btn btn-primary {{ Request::is('login') ? 'active' : '' }}">Register</a>
         </li>
         <li class="nav-item2">
             <a href="/login" class=" btn btn-light {{ Request::is('login') ? 'active' : '' }}"> Login</a>
         </li>
         @endauth
-        <li class="nav-item">
-            
-        <div id="google_translate_element"></div>
-        </li>
 
 
         </ul>
@@ -170,9 +165,9 @@
                 </div>
             </div>
 
-            <img src="assets/img/kapal.png" alt="" data-aos="fade-up" data-aos-duration="800" class="position-absolute end-0 bottom-0">
-            <img src="assets/img/aksen2.png" alt="" class="aksen-img h-100 position-absolute top-0 start-0">
-            <img src="assets/img/aksen2.png" alt="" class="aksen-img h-100 position-absolute end-0 bottom-0">
+            <img src="assets/img/kapal.png" alt="" data-aos="fade-up" data-aos-duration="800" class="kapal position-absolute end-0 top-0">
+            <img src="assets/img/aksen2.png" alt="" class="aksen-img position-absolute top-0 start-0">
+            <img src="assets/img/aksen2.png" alt="" class="aksen-img position-absolute top-0 end-0">
         </div>
     </section>
 
@@ -517,6 +512,25 @@
         </div>
     </footer>
 
+<!-- Modal -->
+<div class="modal fade" id="translateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Translate Page</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Disclaimer: Anda menggunakan Google Translate. Kami tidak bertanggung jawab atas keakuratan informasi dalam bahasa diterjemahkan</p>
+        <div id="google_translate_element"></div>
+
+{{-- <div id="google_translate_element" style="width: 100%;">
+    <div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage"><select class="goog-te-combo" aria-label="Language Translate Widget"><option value="">Select Language</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="am">Amharic</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="as">Assamese</option><option value="ay">Aymara</option><option value="az">Azerbaijani</option><option value="bm">Bambara</option><option value="eu">Basque</option><option value="be">Belarusian</option><option value="bn">Bengali</option><option value="bho">Bhojpuri</option><option value="bs">Bosnian</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="co">Corsican</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="dv">Dhivehi</option><option value="doi">Dogri</option><option value="nl">Dutch</option><option value="en">English</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="ee">Ewe</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option><option value="fy">Frisian</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gn">Guarani</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="ha">Hausa</option><option value="haw">Hawaiian</option><option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="ilo">Ilocano</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kn">Kannada</option><option value="kk">Kazakh</option><option value="km">Khmer</option><option value="rw">Kinyarwanda</option><option value="gom">Konkani</option><option value="ko">Korean</option><option value="kri">Krio</option><option value="ku">Kurdish (Kurmanji)</option><option value="ckb">Kurdish (Sorani)</option><option value="ky">Kyrgyz</option><option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="ln">Lingala</option><option value="lt">Lithuanian</option><option value="lg">Luganda</option><option value="lb">Luxembourgish</option><option value="mk">Macedonian</option><option value="mai">Maithili</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mni-Mtei">Meiteilon (Manipuri)</option><option value="lus">Mizo</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="ne">Nepali</option><option value="no">Norwegian</option><option value="or">Odia (Oriya)</option><option value="om">Oromo</option><option value="ps">Pashto</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="pa">Punjabi</option><option value="qu">Quechua</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sm">Samoan</option><option value="sa">Sanskrit</option><option value="gd">Scots Gaelic</option><option value="nso">Sepedi</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="sn">Shona</option><option value="sd">Sindhi</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sw">Swahili</option><option value="sv">Swedish</option><option value="tg">Tajik</option><option value="ta">Tamil</option><option value="tt">Tatar</option><option value="te">Telugu</option><option value="th">Thai</option><option value="ti">Tigrinya</option><option value="ts">Tsonga</option><option value="tr">Turkish</option><option value="tk">Turkmen</option><option value="ak">Twi</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="ug">Uyghur</option><option value="uz">Uzbek</option><option value="vi">Vietnamese</option><option value="cy">Welsh</option><option value="xh">Xhosa</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="zu">Zulu</option></select></div>Powered by <span style="white-space:nowrap"><a class="VIpgJd-ZVi9od-l4eHX-hSRGPd" href="https://translate.google.com" target="_blank"><img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Translate">Translate</a></span></div></div>
+    </div>
+    </div>
+  </div>
+</div> --}}
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     {{-- <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
@@ -533,11 +547,6 @@
     </script>
 
 {{-- Language --}}
-<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate">
-    function loadGoogleTranslate(){
-        new google.translate.TranslateElement("google_element")
-    }
-</script>
 
 {{-- <script type="text/javascript">
 function googleTranslateElementInit() {
@@ -550,6 +559,41 @@ function googleTranslateElementInit() {
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
+
+    {{-- Language --}}
+{{-- <script>
+
+            function displaytranslate() {
+                var a = document.getElementById('translate');
+                if (a.style.display == 'none') {
+                    a.style.display = 'block';
+                }
+                if (a.style.display == 'block') {
+                    a.style.display = 'none';
+                }
+            }
+        
+</script> --}}
+
+{{-- <script>
+            function googleTranslateElementInit() {
+                var a = document.getElementById('google_translate_element');
+                if (a.style.display == 'none') {
+                    a.style.display = 'block';
+                }
+                if (a.style.display == 'block') {
+                    a.style.display = 'none';
+                }
+            }
+</script> --}}
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement( 'google_translate_element');
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 
 </html>
